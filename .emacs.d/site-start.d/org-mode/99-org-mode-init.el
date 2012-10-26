@@ -571,7 +571,8 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
 (setq org-link-abbrev-alist
       '(("bib" . "~/org/refs.bib::%s")
 	("notes" . "~/org/refs.org::#%s")
-	("papers" . "~/research_resources/papers/%s.pdf")))
+	("papers" . "~/research_resources/papers/%s.pdf")
+	("MR" . "http://www.ams.org/mathscinet-getitem?mr=%s")))
 
 ;; Open pdf's in org-mode
 (eval-after-load "org"
