@@ -572,3 +572,9 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
       '(("bib" . "~/org/refs.bib::%s")
 	("notes" . "~/org/refs.org::#%s")
 	("papers" . "~/research_resources/papers/%s.pdf")))
+
+;; Open pdf's in org-mode
+(eval-after-load "org"
+  '(progn
+     ;; Change .pdf association directly within the alist
+     (setcdr (assoc "\\.pdf\\'" org-file-apps) "emacs %s")))
