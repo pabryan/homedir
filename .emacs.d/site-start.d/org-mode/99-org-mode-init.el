@@ -541,3 +541,41 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
 ;;     (bh/clock-in-parent-task)))
 
 ;; (add-hook 'org-clock-out-hook 'bh/clock-out-maybe 'append)
+
+;;; RefTeX
+(defun org-mode-reftex-setup ()
+  (load-library "reftex")
+  (and (buffer-file-name) (file-exists-p (buffer-file-name))
+       (progn
+	 ;;enable auto-revert-mode to update reftex when bibtex file changes on disk
+	 (global-auto-revert-mode t)
+	 (reftex-parse-all)
+	 ;;add a custom reftex cite format to insert links
+	 (reftex-set-cite-format
+	  '((?b . "[[bib:%l][%l-bib]]")
+	    (?n . "[[notes:%l][%l-notes]]")
+	    (?p . "[[papers:%l][%l-paper]]")
+	    (?t . "%t")
+	    (?h . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]")))))
+  (define-key org-mode-map (kbd "C-c )") 'reftex-citation)
+  (define-key org-mode-map (kbd "C-c (") 'org-mode-reftex-search))
+
+(defun org-mode-reftex-search ()
+  ;;jump to the notes for the paper pointed to at from reftex search
+  (interactive)
+  (org-open-link-from-string (format "[[notes:%s]]" (reftex-citation t))))
+
+
+(add-hook 'org-mode-hook 'org-mode-reftex-setup)
+
+(setq org-link-abbrev-alist
+      '(("bib" . "~/org/refs.bib::%s")
+	("notes" . "~/org/refs.org::#%s")
+	("papers" . "~/research_resources/papers/%s.pdf")
+	("MR" . "http://www.ams.org/mathscinet-getitem?mr=%s")))
+
+;; Open pdf's in org-mode
+(eval-after-load "org"
+  '(progn
+     ;; Change .pdf association directly within the alist
+     (setcdr (assoc "\\.pdf\\'" org-file-apps) "emacs %s")))
