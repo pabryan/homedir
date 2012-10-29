@@ -572,7 +572,12 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
       '(("bib" . "~/org/refs.bib::%s")
 	("notes" . "~/org/refs.org::#%s")
 	("papers" . "~/research_resources/papers/%s.pdf")
-	("MR" . "http://www.ams.org/mathscinet-getitem?mr=%s")))
+	("MR" . "http://www.ams.org/mathscinet-getitem?mr=%s")
+	("gmap"      . "http://maps.google.com/maps?q=%s")
+	("url-en-to-cn" . "http://translate.google.com/translate?sl=en&tl=zh-CN&u=%h")
+	("url-cn-to-en" . "http://translate.google.com/translate?sl=zh-CN&tl=en&u=%h")
+	("en-to-cn" . "http://translate.google.com/#en/zh-CN/%s")
+	("cn-to-en" . "http://translate.google.com/#zh-CN/en/%s")))
 
 ;; Open pdf's in org-mode
 (eval-after-load "org"

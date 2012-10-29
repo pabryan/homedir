@@ -3,7 +3,7 @@
 (setq android-sdk-root-path "/home/paul/development/android/android-sdk-linux")
 
 (add-to-list 'load-path "/home/paul/.emacs.d/android-emacs-toolkit")
-;(require 'androidmk-mode)
+(require 'androidmk-mode)
 (add-hook 'androidmk-mode-hook
 	  (lambda ()
 	    (progn (local-set-key [M-f5] 'androidndk-build)
