@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Readme for android-emacs-toolkit</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2012-02-01 20:33:21 "/>
+<meta name="author" content="Zxy"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><style type="text/css"> HTML {
+FONT-FAMILY: Verdana, Times, serif; MARGIN-LEFT: 40pt; FONT-SIZE:
+10pt; MARGIN-RIGHT: 40pt } PRE { BORDER-BOTTOM: #aebdcc 1pt solid;
+BORDER-LEFT: #aebdcc 1pt solid; PADDING-BOTTOM: 5pt;
+BACKGROUND-COLOR: #f3f5f7; PADDING-LEFT: 5pt; PADDING-RIGHT: 5pt;
+FONT-FAMILY: courier, monospace; MARGIN-LEFT: 45pt; FONT-SIZE:
+10pt; BORDER-TOP: #aebdcc 1pt solid; MARGIN-RIGHT: 45pt;
+BORDER-RIGHT: #aebdcc 1pt solid; PADDING-TOP: 5pt } P { } LI { }
+.author { MARGIN-LEFT: 0pt; FONT-SIZE: 8pt } .date { MARGIN-LEFT:
+0pt; FONT-SIZE: 8pt } H1 { COLOR: darkblue } </style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">Readme for android-emacs-toolkit</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 WHATE IS ANDROID-EMACS-TOOLKIT FOR </a></li>
+<li><a href="#sec-2">2 FOLDER STRUCTURE </a></li>
+<li><a href="#sec-3">3 USAGE </a>
+<ul>
+<li><a href="#sec-3-1">3.1 For Windows users </a></li>
+<li><a href="#sec-3-2">3.2 For Ubuntu users </a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 RUNNING EXAMPLES </a></li>
+<li><a href="#sec-5">5 MORE INFORMATION </a></li>
+<li><a href="#sec-6">6 LICENSE </a></li>
+<li><a href="#sec-7">7 AUTHOR'S WORDS </a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> WHATE IS ANDROID-EMACS-TOOLKIT FOR </h2>
+<div class="outline-text-2" id="text-1">
+
+<p>Android-emacs-toolkit helps to build android development
+environment on emacs. It contains a emacs major mode which help
+to develop android sdk and ndk program.
+</p>
+<p>
+It provides support for <b>create new avd</b>, <b>launch avd</b>, <b>create new android project</b>, <b>build and rebuild Android sdk project</b>,
+<b>build and rebuild Android ndk project</b>, <b>install and uninstall apk</b>, <b>run executable ndk project</b>, <b>output emulator log on emacs</b>.
+</p>
+<p>
+This toolkit tested on WindowsXP/7, Ubuntu11 with android-sdk and
+android-ndk-r7.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> FOLDER STRUCTURE </h2>
+<div class="outline-text-2" id="text-2">
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Folder name</th><th scope="col" class="left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">ndkscript</td><td class="left">Shell script for toolkit</td></tr>
+<tr><td class="left">&ndash;\ <sub>adbt</sub>.sh</td><td class="left">Shell script for text executable program on emulator</td></tr>
+<tr><td class="left">&ndash;\ adr.sh</td><td class="left">Shell script to install and run executable program on emulator</td></tr>
+<tr><td class="left">&ndash;\ api.sh</td><td class="left">Shell script to install apk on emulator</td></tr>
+<tr><td class="left">&ndash;\ apu.sh</td><td class="left">Shell script to uninstall apk on emulator</td></tr>
+<tr><td class="left">&ndash;\ init.sh</td><td class="left">Shell script to set environment variables for current shell</td></tr>
+<tr><td class="left">&ndash;\ lgs.sh</td><td class="left">Shell script to clean and start log of emulator</td></tr>
+<tr><td class="left">&ndash;\ mhp.sh</td><td class="left">Shell script for help</td></tr>
+<tr><td class="left">&ndash;\ ndbr.sh</td><td class="left">Shell script to build or rebuild program with NDK</td></tr>
+<tr><td class="left">jni<sub>template</sub></td><td class="left">Template folder for ndk project</td></tr>
+<tr><td class="left">&ndash;\ Android.mk</td><td class="left">Makefile for ndk project</td></tr>
+<tr><td class="left">&ndash;\ Application.mk</td><td class="left">Setting for ndk project</td></tr>
+<tr><td class="left">&ndash;\ hello-jni.c</td><td class="left">Code for lib</td></tr>
+<tr><td class="left">&ndash;\ helloworld.cpp</td><td class="left">Code for executable</td></tr>
+<tr><td class="left">androidmk-mode.el</td><td class="left">Emacs script for toolkit</td></tr>
+<tr><td class="left">README.org</td><td class="left">Readme</td></tr>
+<tr><td class="left">ChangeLog</td><td class="left">Change log</td></tr>
+<tr><td class="left">LICENSE</td><td class="left">License</td></tr>
+<tr><td class="left">AUTHORS</td><td class="left">Authors</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> USAGE </h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> For Windows users </h3>
+<div class="outline-text-3" id="text-3-1">
+
+<ol>
+<li>Install <a href="http://www.gnu.org/software/emacs/">emacs</a>.
+
+</li>
+<li>Install <a href="http://developer.android.com/sdk/index.html">android-sdk-windows</a>.
+
+</li>
+<li>Install <a href="http://developer.android.com/sdk/ndk/index.html">android-ndk-windows</a>.
+
+</li>
+<li>Install <a href="http://ant.apache.org/bindownload.cgi">ant</a>.
+
+</li>
+<li>Add ant bin folder to PATH.
+
+
+
+<pre class="example">(setenv "PATH" (concat "c:/apache-ant-1.8.2/bin/;" (getenv "PATH")))
+</pre>
+
+
+
+
+</li>
+<li>Install <a href="http://cygwin.com/install.html">cygwin</a>.
+
+</li>
+<li>Set up cygwin for emacs.
+
+
+
+<pre class="example">(when (eq system-type 'windows-nt)
+  (require 'cygwin-mount)
+  (cygwin-mount-activate)
+  (add-hook 'comint-output-filter-functions
+            'shell-strip-ctrl-m nil t)
+  (add-hook 'comint-output-filter-functions
+            'comint-watch-for-password-prompt nil t)
+  (setq explicit-shell-file-name "bash.exe")
+  ;; For subprocesses invoked via the shell
+  ;; (e.g., "shell -c command")
+  (setq shell-file-name explicit-shell-file-name))
+</pre>
+
+
+
+
+</li>
+<li>Set some defvar.
+
+
+
+<pre class="example">;; Do not use '\' instead '/'
+(if (eq system-type 'windows-nt)
+    (progn (setq android-ndk-root-path "e:/zxy/home/program/android-ndk-r7-windows")
+           (setq android-sdk-root-path "e:/zxy/home/program/android-sdk-windows"))
+  ;; Ubuntu do not understanding '~' instead of 'home'
+  (progn (setq android-ndk-root-path "/home/share/program/android-ndk-r7-linux")
+         (setq android-sdk-root-path "/home/share/program/android-sdk-linux")))
+(setq android-default-package "com.zxy")
+</pre>
+
+
+
+
+</li>
+<li>Add android-emacs-toolkit to emacs.
+
+
+
+<pre class="example">(add-to-list 'load-path "c:/android-emacs-toolkit")
+(require 'androidmk-mode)
+(add-hook 'androidmk-mode-hook
+          (lambda ()
+            (progn (local-set-key [M-f5] 'androidndk-build)
+                   (local-set-key [M-S-f5] 'androidndk-rebuild)
+                   (local-set-key [C-f5] 'androidsdk-build)
+                   (local-set-key [C-S-f5] 'androidsdk-rebuild)
+                   )))
+</pre>
+
+
+
+
+</li>
+<li><a href="#sec-4">RUNNING EXAMPLES</a>
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> For Ubuntu users </h3>
+<div class="outline-text-3" id="text-3-2">
+
+<ol>
+<li>Install <a href="http://www.gnu.org/software/emacs/">emacs</a> (sudo apt-get install emacs).
+
+</li>
+<li>Install <a href="http://developer.android.com/sdk/index.html">android-sdk-linux</a>.
+
+</li>
+<li>Install <a href="http://developer.android.com/sdk/ndk/index.html">android-ndk-linux</a>.
+
+</li>
+<li>Install <a href="http://ant.apache.org/bindownload.cgi">ant</a>.
+
+</li>
+<li>Set some defvar.
+
+
+
+<pre class="example">;; Do not use '\' instead '/'
+(if (eq system-type 'windows-nt)
+    (progn (setq android-ndk-root-path "e:/zxy/home/program/android-ndk-r7-windows")
+           (setq android-sdk-root-path "e:/zxy/home/program/android-sdk-windows"))
+  ;; Ubuntu do not understanding '~' instead of 'home'
+  (progn (setq android-ndk-root-path "/home/share/program/android-ndk-r7-linux")
+         (setq android-sdk-root-path "/home/share/program/android-sdk-linux")))
+(setq android-default-package "com.zxy")
+</pre>
+
+
+
+
+</li>
+<li>Add android-emacs-toolkit to emacs.
+
+
+
+<pre class="example">(add-to-list 'load-path "c:/android-emacs-toolkit")
+(require 'androidmk-mode)
+(add-hook 'androidmk-mode-hook
+          (lambda ()
+            (progn (local-set-key [M-f5] 'androidndk-build)
+                   (local-set-key [M-S-f5] 'androidndk-rebuild)
+                   (local-set-key [C-f5] 'androidsdk-build)
+                   (local-set-key [C-S-f5] 'androidsdk-rebuild)
+                   )))
+</pre>
+
+
+
+
+</li>
+<li><a href="#sec-4">RUNNING EXAMPLES</a>
+</li>
+</ol>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> RUNNING EXAMPLES </h2>
+<div class="outline-text-2" id="text-4">
+
+<ol>
+<li>Follow usage.
+
+</li>
+<li>Create new android avd.
+
+
+
+<pre class="example">M-x android-create-avd
+</pre>
+
+
+
+<p>
+   Input avd name.
+</p>
+</li>
+<li>Launch android avd.
+
+
+
+<pre class="example">M-x android-launch-avd
+</pre>
+
+
+
+<p>
+   Input avd name.
+</p>
+</li>
+<li>Output log.
+
+
+
+<pre class="example">M-x android-start-log
+</pre>
+
+
+
+
+</li>
+<li>Create new android project.
+
+
+
+<pre class="example">M-x android-new-project
+</pre>
+
+
+
+<p>
+   Input project path, project name, project target, project
+   pachage, project activity and whether create jni folder. Then
+   java file is open.
+</p>
+</li>
+<li>Build project with ant and install.
+
+
+
+<pre class="example">M-x androidsdk-build
+</pre>
+
+
+
+<p>
+   Hello world will print on emulator.
+</p>
+</li>
+<li>Build ndk project with ndk-build and run.
+
+
+
+<pre class="example">M-x androidndk-build
+</pre>
+
+
+
+<p>
+   Hello world will print on <b>android-log</b> buffer.
+</p></li>
+</ol>
+
+
+<p>   
+<a href="preview.gif"><img src="preview.gif" alt="preview.gif"/></a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> MORE INFORMATION </h2>
+<div class="outline-text-2" id="text-5">
+
+
+<p>
+You can find more information at the project website
+</p>
+<p>
+<a href="http://code.google.com/p/android-emacs-toolkit/">http://code.google.com/p/android-emacs-toolkit/</a>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> LICENSE </h2>
+<div class="outline-text-2" id="text-6">
+
+
+<p>
+This toolkit is licensed under the GPL v3.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> AUTHOR'S WORDS </h2>
+<div class="outline-text-2" id="text-7">
+
+<p>If you find a bug, please post at <a href="https://code.google.com/p/appengine-emacs-toolkit/issues/list">Issues</a>. If you have not find a
+bug and feel this project helpful, please star it. Every star can
+make me know what I do can help other people and drove me forward.
+</p></div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2012-02-01 20:33:21 </p>
+<p class="author">Author: Zxy</p>
+<p class="creator">Org version 7.7 with Emacs version 23</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>
