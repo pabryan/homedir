@@ -103,6 +103,12 @@
 ;;; Agenda
 (setq org-agenda-files (quote ("~/org")))
 
+;; Don't show calendar todos in global list
+;;(setq org-agenda-todo-ignore-with-date t)
+
+;; Only show top level todo's
+;;(setq org-agenda-todo-list-sublevels t)
+
 ;; Dim blocked tasks
 (setq org-agenda-dim-blocked-tasks t)
 
