@@ -594,6 +594,23 @@ as the default task."
 ;; mobile org
 (setq org-mobile-directory "~/Dropbox/mobileorg")
 
+;; My mobile org wrappers
+(defun pb/org-mobile-push-wrapper ()
+  "push to multiple mobileorg targets"
+  (interactive)
+  (setq org-mobile-directory "~/Dropbox/tablet/mobileorg")
+  (org-mobile-push)
+  (setq org-mobile-directory "~/Dropbox/phone/mobileorg")
+  (org-mobile-push))
+
+(defun pb/org-mobile-pull-wrapper()
+  "pull from multiple mobileorg targets"
+  (interactive)
+  (setq org-mobile-directory "~/Dropbox/tablet/mobileorg")
+  (org-mobile-pull)
+  (setq org-mobile-directory "~/Dropbox/phone/mobileorg")
+  (org-mobile-pull))
+  
 ; push automatically
 (defvar org-mobile-push-timer nil
   "Timer that `org-mobile-push-timer' used to reschedule itself, or nil.")
@@ -603,7 +620,7 @@ as the default task."
     (cancel-timer org-mobile-push-timer))
   (setq org-mobile-push-timer
         (run-with-idle-timer
-         (* 1 secs) nil 'org-mobile-push)))
+         (* 1 secs) nil 'pb/org-mobile-push-wrapper)))
 
 (add-hook 'after-save-hook 
  (lambda () 
@@ -617,14 +634,14 @@ as the default task."
 (run-at-time "00:05" 86400 '(lambda () (org-mobile-push-with-delay 1))) 
 
 ;; pull automatically
-(org-mobile-pull) ;; run org-mobile-pull at startup
+(pb/org-mobile-pull-wrapper) ;; run org-mobile-pull at startup
 
 (defun install-monitor (file secs)
   (run-with-timer
    0 secs
    (lambda (f p)
      (unless (< p (second (time-since (elt (file-attributes f) 5))))
-       (org-mobile-pull)))
+       (pb/org-mobile-pull-wrapper)))
    file secs))
 
 (install-monitor (file-truename
@@ -635,4 +652,4 @@ as the default task."
 
 ;; Do a pull every 5 minutes to circumvent problems with timestamping
 ;; (ie. dropbox bugs)
-(run-with-timer 0 (* 5 60) 'org-mobile-pull)
+(run-with-timer 0 (* 5 60) 'pb/org-mobile-pull-wrapper)
