@@ -11,7 +11,6 @@
   ;; If there is more than one, they won't work right.
  '(browse-url-browser-function (quote browse-url-generic))
  '(browse-url-generic-program "x-www-browser")
- '(org-mobile-directory "~/Dropbox/mobileorg")
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m))))
 (custom-set-faces
   ;; custom-set-faces was added by Custom.
