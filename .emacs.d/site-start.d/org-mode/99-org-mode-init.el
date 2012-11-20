@@ -3,7 +3,8 @@
 (setq org-agenda-files (quote ("~/org")))
 
 ;;; Modules
-(setq org-modules (quote (org-habit)))
+(setq org-modules (quote ("org-habit")))
+
 
 ;;; Key bindings
 
