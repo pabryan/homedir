@@ -3,3 +3,4 @@ username = Paul Bryan <pabryan@gmail.com>
 
 [extensions]
 graphlog = 
+autosync = ~/working/external/hg-autosync/autosync.py
