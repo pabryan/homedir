@@ -53,6 +53,9 @@
 (global-set-key (kbd "C-M-c") 'org-capture)
 (global-set-key (kbd "C-c c") 'org-capture)
 
+;; Global settings
+; Rereads org files if changed on disk
+(setq global-auto-revert-mode t)
 
 ;;; todo
 (setq org-todo-keywords
