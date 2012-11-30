@@ -57,6 +57,9 @@
 ; Rereads org files if changed on disk
 (setq global-auto-revert-mode t)
 
+;; Lists
+(setq org-alphabetical-lists t)
+
 ;;; todo
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "SOMEDAY(s)" "|" "DONE(d!/!)")
