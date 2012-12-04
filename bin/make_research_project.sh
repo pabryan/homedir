@@ -31,7 +31,7 @@ hg add || exit 2
 hg commit -m "Initial repository" || exit 2
 
 # Create bitbucket repsitory
-create_bitbucket.py -u pabryan "${proj}" || exit 2
+#create_bitbucket.py -u pabryan "${proj}" || exit 2
 
 # Set hg default path to bitbucket repo
 cat <<EOF > .hg/hgrc
