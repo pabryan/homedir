@@ -42,3 +42,7 @@ EOF
 
 # Push repo to bitbucket
 hg push || exit 2
+
+# Output org snippet
+echo '**'" TODO $proj"
+echo "[[file:${projdir}]]"
