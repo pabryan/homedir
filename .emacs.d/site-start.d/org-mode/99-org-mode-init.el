@@ -86,6 +86,9 @@
 ;;               ("NEXT" ("WAITING") ("CANCELLED") ("HOLD"))
 ;;               ("DONE" ("WAITING") ("CANCELLED") ("HOLD")))))
 
+; list settings
+(setq org-alphabetic-lists t)
+
 ;;; Capture
 (setq org-default-notes-file (concat org-directory "/refile.org"))
 
