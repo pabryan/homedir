@@ -1,5 +1,6 @@
 [ui]
 username = Paul Bryan <pabryan@gmail.com>
+ignore = ~/.hgignorerc
 
 [extensions]
 graphlog = 
