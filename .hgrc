@@ -3,5 +3,11 @@ username = Paul Bryan <pabryan@gmail.com>
 ignore = ~/.hgignorerc
 
 [extensions]
-graphlog = 
+mq =
+graphlog =
+convert = 
 autosync = ~/working/external/hg-autosync/autosync.py
+
+[diff]
+git = 1
+
