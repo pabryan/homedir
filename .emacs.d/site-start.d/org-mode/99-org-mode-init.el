@@ -579,8 +579,8 @@ as the default task."
   (interactive)
   (org-open-link-from-string (format "[[notes:%s]]" (reftex-citation t))))
 
-
 (add-hook 'org-mode-hook 'org-mode-reftex-setup)
+(setq reftex-default-bibliography ("~/org/refs.bib"))
 
 (setq org-link-abbrev-alist
       '(("bib" . "~/org/refs.bib::%s")
