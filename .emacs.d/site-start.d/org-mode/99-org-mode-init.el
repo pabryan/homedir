@@ -408,7 +408,7 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
                                  (org-agenda-files :maxlevel . 9)
 				 ("~/org/someday/someday.org" :maxlevel . 9)
-				 ("~/org/someday" :maxlevel 9)
+				 ("~/org/someday" :maxlevel . 9)
 				 )))
 
 ; Allow refile to create parent tasks with confirmation
