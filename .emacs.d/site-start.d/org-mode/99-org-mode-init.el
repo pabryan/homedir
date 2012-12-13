@@ -663,8 +663,10 @@ as the default task."
 (run-with-timer 0 (* 5 60) 'pb/org-mobile-pull-wrapper)
 
 ;; Latex settings
+; default document structure
 (unless (boundp 'org-export-latex-classes)
   (setq org-export-latex-classes nil))
+
 (add-to-list 'org-export-latex-classes
              '("article"
                "\\documentclass{article}"
@@ -672,3 +674,7 @@ as the default task."
                ("\\subsection{%s}" . "\\subsection*{%s}")
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+; use amsmath
+(add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
+(setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist)	"integrals")
