@@ -670,12 +670,11 @@ as the default task."
 (add-to-list 'org-export-latex-classes
              '("my-article"
 	       "\\documentclass{article}
-                \\usepackage[all]{pabryan} 
+                \\usepackage[all]{pabmacros} 
                 \\input{margins}
                 [NO-DEFAULT-PACKAGES]
                 [NO-PACKAGES]"
-               "\\documentclass{article}"
-               ("\\section{%s}" . "\\section*{%s}")
+                ("\\section{%s}" . "\\section*{%s}")
                ("\\subsection{%s}" . "\\subsection*{%s}")
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
