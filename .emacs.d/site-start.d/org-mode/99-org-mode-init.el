@@ -668,7 +668,12 @@ as the default task."
   (setq org-export-latex-classes nil))
 
 (add-to-list 'org-export-latex-classes
-             '("article"
+             '("my-article"
+	       "\\documentclass{article}
+                \\usepackage[all]{pabryan} 
+                \\input{margins}
+                [NO-DEFAULT-PACKAGES]
+                [NO-PACKAGES]"
                "\\documentclass{article}"
                ("\\section{%s}" . "\\section*{%s}")
                ("\\subsection{%s}" . "\\subsection*{%s}")
