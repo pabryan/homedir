@@ -679,6 +679,8 @@ as the default task."
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
+(setq org-export-latex-default-class "my-article")
+
 ; use amsmath
 (add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
 (setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist)	"integrals")
