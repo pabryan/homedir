@@ -671,9 +671,7 @@ as the default task."
              '("my-article"
 	       "\\documentclass{article}
                 \\usepackage[all]{pabmacros} 
-                \\input{margins}
-                [NO-DEFAULT-PACKAGES]
-                [NO-PACKAGES]"
+                \\input{margins}"    
                 ("\\section{%s}" . "\\section*{%s}")
                ("\\subsection{%s}" . "\\subsection*{%s}")
                ("\\paragraph{%s}" . "\\paragraph*{%s}")
