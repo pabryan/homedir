@@ -11,8 +11,8 @@ for proj in ${projs}; do
   proj="${proj%.hg}"
   cd $proj
 #  echo "*********************************************"
-#  echo "Checking ${proj}"
-#  echo "---------------------------------------------"
+  echo "Checking ${proj}"
+  echo "---------------------------------------------"
   
 
   hg summary | grep -q 'commit: (clean)'
@@ -29,6 +29,6 @@ for proj in ${projs}; do
   if [ $? -eq 0 ]; then
       echo "${proj} has outgoing changes"
   fi
-#  echo "---------------------------------------------"
+
   cd $working
 done
