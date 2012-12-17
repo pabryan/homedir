@@ -110,6 +110,9 @@
 ;;; Agenda
 (setq org-agenda-files (quote ("~/org")))
 
+; By default only show today
+(setq org-agenda-span 'day)
+
 ;; Don't show calendar todos in global list
 ;;(setq org-agenda-todo-ignore-with-date t)
 
