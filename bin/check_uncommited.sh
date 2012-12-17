@@ -11,8 +11,8 @@ for proj in ${projs}; do
   proj="${proj%.hg}"
   cd $proj
 #  echo "*********************************************"
-  echo "Checking ${proj}"
-  echo "---------------------------------------------"
+#  echo "Checking ${proj}"
+#  echo "---------------------------------------------"
   
 
   hg summary | grep -q 'commit: (clean)'
@@ -21,7 +21,14 @@ for proj in ${projs}; do
   fi
 
   hg incoming >/dev/null
-  if [ $? -eq 0 ]; then
+  retval=$?
+  if [ $retval -eq 255 ]; then
+      echo "${proj} has no default repository" >&2
+      cd $working
+      continue
+  fi
+
+  if [ $retval -eq 0 ]; then
       echo "${proj} has incoming changes"
   fi
 
