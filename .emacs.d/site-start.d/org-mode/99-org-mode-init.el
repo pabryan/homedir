@@ -151,7 +151,15 @@
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/thriveflow")
 		     :clock-in t :clock-keep t)
-	      ("Hxf" "Flow Physique")
+	      ("Hxb" "Be Breathed" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/bebreathed")
+		     :clock-in t :clock-keep t)
+	      ("Hxb" "X-Tension" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/xtension")
+		     :clock-in t :clock-keep t)
+	      ("Hxp" "Flow Physique")
 	      ("Hxft" "[20/12x8+60]6" entry 
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/flowphysique_twenty")
@@ -168,7 +176,7 @@
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/flowphysique_amrap")
 		     :clock-in t :clock-keep t)
-	      ("Hxfn" "[90/3x5]2" entry 
+	      ("Hxfn" "[90/30x5]2" entry 
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/flowphysique_ninety")
 		     :clock-in t :clock-keep t)
