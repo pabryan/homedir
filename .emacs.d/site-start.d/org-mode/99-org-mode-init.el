@@ -94,33 +94,45 @@
 
 ;; Capture templates
 (setq org-capture-templates
-      (quote (("t" "todo" entry (file "~/org/refile.org")
-               "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("r" "respond" entry (file "~/org/refile.org")
-               "* TODO Respond to %:from on %:subject\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
-              ("n" "note" entry (file "~//org/refile.org")
-               "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("j" "Journal" entry (file+datetree "~/org/diary.org")
-               "* %?\n%U\n" :clock-in t :clock-resume t)
-              ("w" "org-protocol" entry (file "~/org/refile.org")
-               "* TODO Review %c\n%U\n" :immediate-finish t)
-              ("h" "Habit" entry (file "~/org/refile.org")
-               "* NEXT %?\n%U\n%a\nSCHEDULED: %t .+1d/3d\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
-
-(setq org-capture-templates
-      (quote (("H" "health" )
-	     ("Hx" "Exercise")
-	     ("Hxs" "Stretch" entry 
-	            (file+datetree+prompt "~/org/healthdiary.org")
-		    (file "~/org/capture_templates/stretch") 
-		    :clock-in t :clock-keep t)
-	     ("Hxf" "Foam Roller" entry 
-	            (file+datetree+prompt "~/org/healthdiary.org")
-		    "* Foam Roller%?\n%U\n"
-		    :clock-in t :clock-keep t)
+      (quote (("t" "todo" entry 
+	           (file "~/org/refile.org")
+		   "* TODO %?\n%U\n%a\n" 
+		   :clock-in t :clock-resume t)
+              ("r" "respond" entry 
+	           (file "~/org/refile.org")
+		   "* TODO Respond to %:from on %:subject\n%U\n%a\n" 
+		   :clock-in t :clock-resume t :immediate-finish t)
+              ("n" "note" entry 
+	           (file "~//org/refile.org")
+		   "* %? :NOTE:\n%U\n%a\n" 
+		   :clock-in t :clock-resume t)
+              ("j" "Journal" entry 
+	           (file+datetree "~/org/diary.org")
+		   "* %?\n%U\n" 
+		   :clock-in t :clock-resume t)
+              ("w" "org-protocol" entry 
+	           (file "~/org/refile.org")
+		   "* TODO Review %c\n%U\n" 
+		   :immediate-finish t)
+              ("h" "Habit" entry 
+	           (file "~/org/refile.org")
+		   "* NEXT %?\n%U\n%a\nSCHEDULED: %t .+1d/3d\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
+	      ("H" "health" )
+	      ("Hx" "Exercise")
+	      ("Hxs" "Stretch" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/stretch")
+		     :clock-in t :clock-keep t)
+	      ("Hxf" "Foam Roller" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/foamroller")
+		     :clock-in t :clock-keep t)
+	      ("Hxf" "Qi Gong" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/qigong")
+		     :clock-in t :clock-keep t)
 	     )))
 
-(file "~/org/capture_templates/foamroller") 
 
 
 ;;; Agenda
