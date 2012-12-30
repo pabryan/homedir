@@ -127,9 +127,54 @@
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/foamroller")
 		     :clock-in t :clock-keep t)
-	      ("Hxf" "Qi Gong" entry 
+	      ("Hxq" "Qi Gong" entry 
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/qigong")
+		     :clock-in t :clock-keep t)
+	      ("Hxt" "Tai Ji" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/taiji")
+		     :clock-in t :clock-keep t)
+	      ("Hxy" "Yoga" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/yoga")
+		     :clock-in t :clock-keep t)
+	      ("Hxi" "Intuflow" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/intuflow")
+		     :clock-in t :clock-keep t)
+	      ("Hxa" "Ageless Mobility" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/agelessmobility")
+		     :clock-in t :clock-keep t)
+	      ("Hxv" "Thrive Flow" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/thriveflow")
+		     :clock-in t :clock-keep t)
+	      ("Hxf" "Flow Physique")
+	      ("Hxft" "[20/12x8+60]6" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/flowphysique_twenty")
+		     :clock-in t :clock-keep t)
+	      ("Hxff" "4/1x4" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/flowphysique_four")
+		     :clock-in t :clock-keep t)
+	      ("Hxfe" "EMOTM" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/flowphysique_emotm")
+		     :clock-in t :clock-keep t)
+	      ("Hxfa" "AMRAP" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/flowphysique_amrap")
+		     :clock-in t :clock-keep t)
+	      ("Hxfn" "[90/3x5]2" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/flowphysique_ninety")
+		     :clock-in t :clock-keep t)
+	      ("Hxfp" "AFAP" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/flowphysique_afap")
 		     :clock-in t :clock-keep t)
 	     )))
 
