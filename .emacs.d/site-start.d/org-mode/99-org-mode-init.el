@@ -113,12 +113,15 @@
 	     ("Hxs" "Stretch" entry 
 	            (file+datetree+prompt "~/org/healthdiary.org")
 		    (file "~/org/capture_templates/stretch") 
-		    :clock-in t)
+		    :clock-in t :clock-keep t)
 	     ("Hxf" "Foam Roller" entry 
 	            (file+datetree+prompt "~/org/healthdiary.org")
-		    (file "~/org/capture_templates/foamroller") 
-		    :clock-in t)
+		    "* Foam Roller%?\n%U\n"
+		    :clock-in t :clock-keep t)
 	     )))
+
+(file "~/org/capture_templates/foamroller") 
+
 
 ;;; Agenda
 (setq org-agenda-files (quote ("~/org")))
