@@ -107,6 +107,15 @@
               ("h" "Habit" entry (file "~/org/refile.org")
                "* NEXT %?\n%U\n%a\nSCHEDULED: %t .+1d/3d\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
 
+(setq org-capture-templates
+      (quote ("H" "health" )
+	     ("Hx" "Exercise")
+	     ("Hxs" "Stretch" entry (file+datetree+prompt "~/org/healthdiary.org")
+	      (file "~/org/capture_templates/stretch") :clock-in t :clock-resume t)
+	     ("Hxf" "Foam Roller" entry (file+datetree+prompt "~/org/healthdiary.org")
+	      (file "~/org/capture_templates/foamroller") :clock-in t :clock-resume t)
+	     ))
+
 ;;; Agenda
 (setq org-agenda-files (quote ("~/org")))
 
