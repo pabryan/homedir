@@ -113,11 +113,11 @@
 	     ("Hxs" "Stretch" entry 
 	            (file+datetree+prompt "~/org/healthdiary.org")
 		    (file "~/org/capture_templates/stretch") 
-		    :clock-in t :clock-resume t)
+		    :clock-in t)
 	     ("Hxf" "Foam Roller" entry 
 	            (file+datetree+prompt "~/org/healthdiary.org")
 		    (file "~/org/capture_templates/foamroller") 
-		    :clock-in t :clock-resume t)
+		    :clock-in t)
 	     )))
 
 ;;; Agenda
