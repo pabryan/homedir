@@ -159,7 +159,7 @@
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/xtension")
 		     :clock-in t :clock-keep t)
-	      ("Hxp" "Flow Physique")
+	      ("Hxf" "Flow Physique")
 	      ("Hxft" "[20/12x8+60]6" entry 
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/flowphysique_twenty")
