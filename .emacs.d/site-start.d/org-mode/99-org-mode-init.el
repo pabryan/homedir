@@ -159,28 +159,28 @@
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/xtension")
 		     :clock-in t :clock-keep t)
-	      ("Hxf" "Flow Physique")
-	      ("Hxft" "[20/12x8+60]6" entry 
+	      ("Hxp" "Flow Physique")
+	      ("Hxpt" "[20/12x8+60]6" entry 
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/flowphysique_twenty")
 		     :clock-in t :clock-keep t)
-	      ("Hxff" "4/1x4" entry 
+	      ("Hxpf" "4/1x4" entry 
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/flowphysique_four")
 		     :clock-in t :clock-keep t)
-	      ("Hxfe" "EMOTM" entry 
+	      ("Hxpe" "EMOTM" entry 
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/flowphysique_emotm")
 		     :clock-in t :clock-keep t)
-	      ("Hxfa" "AMRAP" entry 
+	      ("Hxpa" "AMRAP" entry 
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/flowphysique_amrap")
 		     :clock-in t :clock-keep t)
-	      ("Hxfn" "[90/30x5]2" entry 
+	      ("Hxpn" "[90/30x5]2" entry 
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/flowphysique_ninety")
 		     :clock-in t :clock-keep t)
-	      ("Hxfp" "AFAP" entry 
+	      ("Hxpp" "AFAP" entry 
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/flowphysique_afap")
 		     :clock-in t :clock-keep t)
