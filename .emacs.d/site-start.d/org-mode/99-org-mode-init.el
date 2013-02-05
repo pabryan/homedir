@@ -657,12 +657,14 @@ as the default task."
 	    (?n . "[[notes:%l][%l-notes]]")
 	    (?p . "[[papers:%l][%l-paper]]")
 	    (?t . "%t")
-	    (?h . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]\n[[bib:%l][%l-bib]]")))))
+	    (?h . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]\n[[bib:%l][%l-bib]]")
+	    (?m . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]\n[[bib:%l][%l-bib]]\n[[MR:%l][%l-MR]]")
+	    (?a . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]\n[[bib:%l][%l-bib]]\n[[arXiv:%l][%l-arXiv]]")))))
   (define-key org-mode-map (kbd "C-c )") 'reftex-citation)
   (define-key org-mode-map (kbd "C-c (") 'org-mode-reftex-search))
 
 (defun org-mode-reftex-search ()
-  ;;jump to the notes for the paper pointed to at from reftex search
+  ;;jump to the notes for the paper pointed to from reftex search
   (interactive)
   (org-open-link-from-string (format "[[notes:%s]]" (reftex-citation t))))
 
@@ -674,6 +676,8 @@ as the default task."
 	("notes" . "~/org/refs.org::#%s")
 	("papers" . "~/research_resources/papers/%s.pdf")
 	("MR" . "http://www.ams.org/mathscinet-getitem?mr=%s")
+	("arXix" . "http://www.arxiv.org/abs/%s")
+	("google" . "http://www.google.com/search?q=%s")
 	("gmap"      . "http://maps.google.com/maps?q=%s")
 	("url-en-to-cn" . "http://translate.google.com/translate?sl=en&tl=zh-CN&u=%h")
 	("url-cn-to-en" . "http://translate.google.com/translate?sl=zh-CN&tl=en&u=%h")
