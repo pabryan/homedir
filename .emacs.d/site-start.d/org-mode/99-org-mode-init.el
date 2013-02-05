@@ -659,7 +659,8 @@ as the default task."
 	    (?t . "%t")
 	    (?h . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]\n[[bib:%l][%l-bib]]")
 	    (?m . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]\n[[bib:%l][%l-bib]]\n[[MR:%l][%l-MR]]")
-	    (?a . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]\n[[bib:%l][%l-bib]]\n[[arXiv:%l][%l-arXiv]]")))))
+	    (?a . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]\n[[bib:%l][%l-bib]]\n[[arXiv:%l][%l-arXiv]]"))))))
+
   (define-key org-mode-map (kbd "C-c )") 'reftex-citation)
   (define-key org-mode-map (kbd "C-c (") 'org-mode-reftex-search))
 
