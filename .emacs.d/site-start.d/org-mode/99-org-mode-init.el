@@ -428,6 +428,10 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
                 (tags-todo "-CANCELLED-SOMEDAY/!"
                            ((org-agenda-overriding-header "Stuck Projects")
                             (org-agenda-skip-function 'bh/skip-non-stuck-projects)))
+                (tags-todo "+FOCUS/!"
+                           ((org-agenda-overriding-header "Focus")
+                            (org-agenda-skip-function 'bh/skip-non-projects)))
+
                 (tags-todo "-WAITING-CANCELLED-SOMEDAY/!NEXT"
                            ((org-agenda-overriding-header "Next Tasks")
                             (org-agenda-skip-function 'bh/skip-projects-and-habits-and-single-tasks)
