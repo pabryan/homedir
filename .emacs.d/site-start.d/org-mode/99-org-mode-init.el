@@ -422,16 +422,15 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
                  '(todo-state-down effort-up category-keep))))
               (" " "Agenda"
                ((agenda "" nil)
+		(tags-todo "+FOCUS/!"
+                           ((org-agenda-overriding-header "Focus")
+                            (org-agenda-skip-function 'bh/skip-non-projects)))
                 (tags "REFILE"
                       ((org-agenda-overriding-header "Tasks to Refile")
                        (org-tags-match-list-sublevels nil)))
                 (tags-todo "-CANCELLED-SOMEDAY/!"
                            ((org-agenda-overriding-header "Stuck Projects")
-                            (org-agenda-skip-function 'bh/skip-non-stuck-projects)))
-                (tags-todo "+FOCUS/!"
-                           ((org-agenda-overriding-header "Focus")
-                            (org-agenda-skip-function 'bh/skip-non-projects)))
-
+                            (org-agenda-skip-function 'bh/skip-non-stuck-projects)))                
                 (tags-todo "-WAITING-CANCELLED-SOMEDAY/!NEXT"
                            ((org-agenda-overriding-header "Next Tasks")
                             (org-agenda-skip-function 'bh/skip-projects-and-habits-and-single-tasks)
