@@ -1,0 +1,13 @@
+#!/bin/bash
+
+host=`xinputbox "Connect to host" "Enter host"`
+
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+
+if [ -z "${host}" ]; then
+    localsession &
+else
+    remotesession "${host}" &
+fi

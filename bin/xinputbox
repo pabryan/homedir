@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+    title=""
+else
+    title="$1"
+fi
+
+if [ -z "$2" ]; then
+    msg=""
+else
+    msg="$2"
+fi
+
+input=`Xdialog --stdout --title "${title}" --inputbox "${msg}" 10 45 2>/dev/null`
+retval=$?
+case $retval in
+  0)
+    echo "${input}";;
+  1)
+    exit 1;;
+  255)
+    exit 1;;
+esac

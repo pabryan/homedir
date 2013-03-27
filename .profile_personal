@@ -1,0 +1,25 @@
+# Include subversion environment variables
+if [ -f ~/.profile_svn ]; then
+    . ~/.profile_svn
+fi
+
+# Include python setup
+if [ -f ~/.profile_svn ]; then
+    . ~/.profile_svn
+fi
+
+# TeX setup
+if [ -f ~/.profile_tex ]; then
+    . ~/.profile_tex
+fi
+
+# Android devel
+if [ -f ~/.profile_android ]; then
+    . ~/.profile_android
+fi
+
+# Set prompt
+export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@notebook:\w\$ '
+
+# Use emacsclient wrapper
+#export EDITOR=${HOME}/bin/myemacs_blocking

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ -f ~/.nointernet ]; then
+  fetchmail >/dev/null 2>&1
+else
+  fetchmail -s 
+fi

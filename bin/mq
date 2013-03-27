@@ -1,0 +1,11 @@
+#!/bin/bash
+
+hgroot=$(hg root)
+queue=$(cat $hgroot/.hg/patches.queue 2>/dev/null)
+if [ -z "${queue}" ]; then
+  patches="patches"
+else
+  patches="patches-${queue}"
+fi
+
+hg -R "${hgroot}/.hg/${patches}" "$@"
