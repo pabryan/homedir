@@ -1,0 +1,5 @@
+#+LaTeX_HEADER: \usepackage[bibstyle=alphabetic,citestyle=alphabetic]{biblatex}
+#+LaTeX_HEADER: \bibliography{refs}
+#+LaTeX_HEADER: \AtEveryBibitem{\clearfield{doi}}
+#+LaTeX_HEADER: \AtEveryBibitem{\clearfield{url}}
+#+LaTeX_HEADER: \AtEveryBibitem{\clearfield{issn}}
