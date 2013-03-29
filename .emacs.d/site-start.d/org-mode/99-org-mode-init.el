@@ -778,6 +778,9 @@ as the default task."
 
 ;; (setq org-export-latex-default-class "my-article") 
 
-; use amsmath
+; use amsmath and my macros
 (add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
+(add-to-list 'org-export-latex-packages-alist '("all" "pabmacros" t))
+
+; amsmath conflicts with waysysym and this fixes it
 (setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist)	"integrals")
