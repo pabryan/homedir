@@ -763,20 +763,20 @@ as the default task."
 
 ;; Latex settings
 ; default document structure
-(unless (boundp 'org-export-latex-classes)
-  (setq org-export-latex-classes nil))
+;(unless (boundp 'org-export-latex-classes)
+;  (setq org-export-latex-classes nil))
 
-(add-to-list 'org-export-latex-classes
-             '("my-article"
-	       "\\documentclass{article}
-                \\usepackage[all]{pabmacros} 
-                \\input{margins}"    
-                ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+;(add-to-list 'org-export-latex-classes
+;             '("my-article"
+;	       "\\documentclass{article}
+;                \\usepackage[all]{pabmacros} 
+;                \\input{margins}"    
+;                ("\\section{%s}" . "\\section*{%s}")
+;               ("\\subsection{%s}" . "\\subsection*{%s}")
+;               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
-(setq org-export-latex-default-class "my-article")
+;; (setq org-export-latex-default-class "my-article") 
 
 ; use amsmath
 (add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
