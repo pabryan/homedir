@@ -3,8 +3,8 @@
 formula="${1}"
 out="${2}"
 
-formula='$f(x,y) = e^x$'
-out="q3_a4"
+formula='$\frac{4}{\pi}$'
+out="q6_a3"
 
 head="\documentclass[border=2pt,varwidth]{standalone}
 \usepackage{standalone}
