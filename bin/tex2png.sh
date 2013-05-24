@@ -3,6 +3,9 @@
 formula="${1}"
 out="${2}"
 
+formula='$f(x,y) = e^x$'
+out="q3_a4"
+
 head="\documentclass[border=2pt,varwidth]{standalone}
 \usepackage{standalone}
 \usepackage{amsmath}
