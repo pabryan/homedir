@@ -3,8 +3,8 @@
 formula="${1}"
 out="${2}"
 
-formula='$[s^2 Y(s) - sy(0) - y\'(0)] + Y(s) = f$'
-out="q3_a1"
+formula='$-\frac{2/3}{s^2 + 4}$'
+out="q4_a3"
 
 head="\documentclass[border=2pt,varwidth]{standalone}
 \usepackage{standalone}
