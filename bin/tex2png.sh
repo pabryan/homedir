@@ -3,8 +3,14 @@
 formula="${1}"
 out="${2}"
 
-formula='$\frac{4}{\pi}$'
-out="q6_a3"
+formula='True of false? The following function is piecewise continuous?
+   \[
+   f(t) = \begin{cases}
+   0, & t\leq 0 \\
+   1/t, & t>0
+   \end{cases}
+   \]'
+out="q1"
 
 head="\documentclass[border=2pt,varwidth]{standalone}
 \usepackage{standalone}
