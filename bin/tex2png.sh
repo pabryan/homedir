@@ -3,14 +3,8 @@
 formula="${1}"
 out="${2}"
 
-formula='True of false? The following function is piecewise continuous?
-   \[
-   f(t) = \begin{cases}
-   0, & t\leq 0 \\
-   1/t, & t>0
-   \end{cases}
-   \]'
-out="q1"
+formula='$[s^2 Y(s) - sy(0) - y\'(0)] + Y(s) = f$'
+out="q3_a1"
 
 head="\documentclass[border=2pt,varwidth]{standalone}
 \usepackage{standalone}
