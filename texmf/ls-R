@@ -9,6 +9,7 @@ tex
 ./tex:
 chngcntr
 latex
+plain
 springer
 
 ./tex/chngcntr:
@@ -20,12 +21,8 @@ chngcntr.tex
 base
 comment.sty
 currfile
-filehook
-filemod
 macros
-standalone
 xargs.sty
-ydoc
 
 ./tex/latex/base:
 cej.cls
@@ -37,27 +34,6 @@ currfile.ins
 currfile.log
 currfile.pdf
 currfile.sty
-README
-
-./tex/latex/filehook:
-filehook.dtx
-filehook-fink.sty
-filehook.ins
-filehook-listings.sty
-filehook.log
-filehook-memoir.sty
-filehook.pdf
-filehook-scrlfile.sty
-filehook.sty
-pgf-filehook.sty
-README
-
-./tex/latex/filemod:
-filemod-expmin.sty
-filemod-expmin.tex
-filemod.pdf
-filemod.sty
-filemod.tex
 README
 
 ./tex/latex/macros:
@@ -95,7 +71,34 @@ pabtopology.tex
 pabtopology.tex~
 pabvarieties.tex
 
-./tex/latex/standalone:
+./tex/plain:
+filehook
+filemod
+standalone
+ydoc
+
+./tex/plain/filehook:
+filehook.dtx
+filehook-fink.sty
+filehook.ins
+filehook-listings.sty
+filehook.log
+filehook-memoir.sty
+filehook.pdf
+filehook-scrlfile.sty
+filehook.sty
+pgf-filehook.sty
+README
+
+./tex/plain/filemod:
+filemod-expmin.sty
+filemod-expmin.tex
+filemod.pdf
+filemod.sty
+filemod.tex
+README
+
+./tex/plain/standalone:
 README
 standalone.cfg
 standalone.cls
@@ -106,7 +109,7 @@ standalone.pdf
 standalone.sty
 standalone.tex
 
-./tex/latex/ydoc:
+./tex/plain/ydoc:
 README
 ydoc.cfg
 ydoc.cls

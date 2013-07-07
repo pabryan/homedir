@@ -1,0 +1,17 @@
+setenv HISTFILE ${HOME}/.bash_working_history
+chdir /home/paul/working
+screen -t working 0
+chdir
+setenv HISTFILE ${HOME}/.bash_general_history
+screen -t general 1
+setenv HISTFILE ${HOME}/.bash_sys_history
+screen -t sys 2
+setenv HISTFILE ${HOME}/.bash_ref_history
+screen -t ref 3
+setenv HISTFILE ${HOME}/.bash_uni_history
+chdir /home/paul/uni
+screen -t uni 4
+chdir
+
+select 1
+
