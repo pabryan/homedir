@@ -1,40 +1,50 @@
-This is TeX, Version 3.1415926 (TeX Live 2009/Debian) (format=tex 2012.10.11)  6 MAY 2013 09:49
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2012.10.15)  27 MAY 2013 10:22
+entering extended mode
+ %&-line parsing enabled.
 **currfile.ins
-(./currfile.ins (/home/pbryan/texmf/tex/plain/ydoc/ydocstrip.tex
+(./currfile.ins
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
+ak, danish, dutch, finnish, french, basque, ngerman, german, german-x-2009-06-1
+9, ngerman-x-2009-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, san
+skrit, italian, latin, latvian, lithuanian, mongolian2a, mongolian, bokmal, nyn
+orsk, romanian, irish, coptic, serbian, turkish, welsh, esperanto, uppersorbian
+, estonian, indonesian, interlingua, icelandic, kurmanji, slovenian, polish, po
+rtuguese, spanish, galician, catalan, swedish, ukenglish, pinyin, loaded.
+(/home/paul/texmf/tex/latex/ydoc/ydocstrip.tex
 (/usr/share/texmf-texlive/tex/latex/base/docstrip.tex
-\blockLevel=\count26
-\emptyLines=\count27
-\processedLines=\count28
-\commentsRemoved=\count29
-\commentsPassed=\count30
-\codeLinesPassed=\count31
-\TotalprocessedLines=\count32
-\TotalcommentsRemoved=\count33
-\TotalcommentsPassed=\count34
-\TotalcodeLinesPassed=\count35
-\NumberOfFiles=\count36
-\inFile=\read0
-\inputcheck=\read1
-\@tempcnta=\count37
-\off@0=\count38
-\off@1=\count39
-\off@2=\count40
-\off@3=\count41
-\off@4=\count42
-\off@5=\count43
-\off@6=\count44
-\off@7=\count45
-\off@8=\count46
-\off@9=\count47
-\off@10=\count48
-\off@11=\count49
-\off@12=\count50
-\off@13=\count51
-\off@14=\count52
-\off@15=\count53
-\@temptokena=\toks12
-\@maxfiles=\count54
-\@maxoutfiles=\count55
+\blockLevel=\count79
+\emptyLines=\count80
+\processedLines=\count81
+\commentsRemoved=\count82
+\commentsPassed=\count83
+\codeLinesPassed=\count84
+\TotalprocessedLines=\count85
+\TotalcommentsRemoved=\count86
+\TotalcommentsPassed=\count87
+\TotalcodeLinesPassed=\count88
+\NumberOfFiles=\count89
+\inFile=\read1
+\inputcheck=\read2
+\off@0=\count90
+\off@1=\count91
+\off@2=\count92
+\off@3=\count93
+\off@4=\count94
+\off@5=\count95
+\off@6=\count96
+\off@7=\count97
+\off@8=\count98
+\off@9=\count99
+\off@10=\count100
+\off@11=\count101
+\off@12=\count102
+\off@13=\count103
+\off@14=\count104
+\off@15=\count105
+\@maxfiles=\count106
+\@maxoutfiles=\count107
 
 Utility: `docstrip' 2.5d <2005/07/29>
 English documentation    <1999/03/31>
@@ -50,8 +60,8 @@ English documentation    <1999/03/31>
 
 ))
 
-Generating file(s) currfile.sty 
-\openout0 = `currfile.sty'.
+Generating file(s) ./currfile.sty 
+\openout0 = `./currfile.sty'.
 
 
 Processing file currfile.dtx (currfile.sty) -> currfile.sty
@@ -62,8 +72,8 @@ Comments  passed: 0
 Codelines passed: 542
 
 
-Generating file(s) currfile-abspath.sty 
-\openout0 = `currfile-abspath.sty'.
+Generating file(s) ./currfile-abspath.sty 
+\openout0 = `./currfile-abspath.sty'.
 
 
 Processing file currfile.dtx (currfile-abspath.sty) -> currfile-abspath.sty
@@ -79,5 +89,14 @@ Lines  processed: 2382
 Comments removed: 1254
 Comments  passed: 0
 Codelines passed: 1084
- )
+ ) 
+Here is how much of TeX's memory you used:
+ 348 strings out of 493849
+ 3645 string characters out of 1152845
+ 54452 words of memory out of 3000000
+ 3713 multiletter control sequences out of 15000+50000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 11i,0n,15p,291b,140s stack positions out of 5000i,500n,10000p,200000b,50000s
+
 No pages of output.
