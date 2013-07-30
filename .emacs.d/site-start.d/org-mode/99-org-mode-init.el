@@ -61,6 +61,8 @@
 (setq org-alphabetical-lists t)
 
 ;;; todo
+(setq org-enforce-todo-dependencies t)
+
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "SOMEDAY(s)" "|" "DONE(d!/!)")
               (sequence "WAITING(w@/!)" "HOLD(h@/!)" "|" "CANCELLED(c@/!)" ))))
