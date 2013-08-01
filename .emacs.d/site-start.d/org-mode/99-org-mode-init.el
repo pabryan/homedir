@@ -168,6 +168,10 @@
 	             (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/xtension")
 		     :clock-in t :clock-resume t)
+	      ("Hxw" "Flow Fit" entry 
+	             (file+datetree+prompt "~/org/healthdiary.org")
+		     (file "~/org/capture_templates/flowfit"))
+
 	      ("Hxp" "Flow Physique")
 	      ("Hxpt" "[20/12x8+60]6" entry 
 	             (file+datetree+prompt "~/org/healthdiary.org")
