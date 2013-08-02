@@ -549,6 +549,7 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
 (setq org-drawers (quote ("PROPERTIES" "LOGBOOK")))
 ;; Save clock data and state changes and notes in the LOGBOOK drawer
 (setq org-clock-into-drawer t)
+(setq org-log-into-drawer t)
 ;; Removes clocked tasks with 0:00 duration
 (setq org-clock-out-remove-zero-time-clocks t)
 ;; Clock out when moving task to a done state
