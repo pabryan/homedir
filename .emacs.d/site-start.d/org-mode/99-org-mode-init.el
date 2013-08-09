@@ -3,7 +3,7 @@
 (setq org-agenda-files (quote ("~/org")))
 
 ;;; Modules
-(setq org-modules (quote ("org-habit")))
+;(setq org-modules (quote ("org-habit")))
 
 
 ;;; Key bindings
@@ -789,5 +789,10 @@ as the default task."
 (add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
 (add-to-list 'org-export-latex-packages-alist '("all" "pabmacros" t))
 
+;; there's a more official way to do this
+;; but I don't know how to do it in .emacs!
+;; the code below does not work anymore since org-export-latex-default-class 
+;; doesn't seem to exist/be set anymore
+
 ; amsmath conflicts with waysysym and this fixes it
-(setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist)	"integrals")
+;(setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist)	"integrals")
