@@ -219,6 +219,9 @@
 ;; Compact the block agenda view
 (setq org-agenda-compact-blocks t)
 
+;; Only show up to a week's worth of task in agenda
+(setq org-deadline-warning-days 7)
+
 ;; Agenda helper functions
 (defun bh/is-project-p ()
   "Any task with a todo keyword subtask"
