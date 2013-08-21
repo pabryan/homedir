@@ -112,7 +112,7 @@
 		   "* %? :NOTE:\n%U\n%a\n" 
 		   :clock-in t :clock-resume t)
               ("j" "Journal" entry 
-	           (file+datetree "~/org/diary.org")
+	           (file+datetree "~/org/journal.org")
 		   "* %?\n%U\n" 
 		   :clock-in t :clock-resume t)
 	      ("R" "Research Note" entry 
@@ -126,6 +126,9 @@
               ("h" "Habit" entry 
 	           (file "~/org/refile.org")
 		   "* NEXT %?\n%U\n%a\nSCHEDULED: %t .+1d/3d\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
+	      ("d" "Diary" entry
+	       (file+datetree "~/org/diary.org")
+	       "* %?\n%U\n")	       
 	      ("H" "health" )
 	      ("Hx" "Exercise")
 	      ("Hxs" "Stretch" entry 
