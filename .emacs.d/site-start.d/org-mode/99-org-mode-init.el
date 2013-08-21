@@ -128,7 +128,7 @@
 		   "* NEXT %?\n%U\n%a\nSCHEDULED: %t .+1d/3d\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n")
 	      ("d" "Diary" entry
 	       (file+datetree "~/org/diary.org")
-	       "* %?\n%U\n")	       
+	       "* Log\n%?")	       
 	      ("H" "health" )
 	      ("Hx" "Exercise")
 	      ("Hxs" "Stretch" entry 
