@@ -709,7 +709,7 @@ as the default task."
 (eval-after-load "org"
   '(progn
      ;; Change .pdf association directly within the alist
-     (setcdr (assoc "\\.pdf\\'" org-file-apps) "emacs %s")))
+     (setcdr (assoc "\\.pdf\\'" org-file-apps) "emacsclient --alternate-editor '' %s")))
 
 ;; mobile org
 (setq org-mobile-directory "~/Dropbox/mobileorg")
