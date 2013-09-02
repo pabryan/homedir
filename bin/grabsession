@@ -4,14 +4,12 @@
 sessionfile=${HOME}/session/updatesession
 > $sessionfile
 
-# SSH env vars
-ssh-agent -s >> $sessionfile
 # DBUS env vars
 dbus-launch --sh-syntax >> $sessionfile
 
 # Other vars
 
-vars="DISPLAY SESSION_MANAGER GPG_AGENT_INFO GNOME_KEYRING_CONTROL GNOME_KEYRING_PID"
+vars="SSH_AUTH_SOCK SSH_AGENT_PID DISPLAY SESSION_MANAGER GPG_AGENT_INFO GNOME_KEYRING_CONTROL GNOME_KEYRING_PID"
 
 for x in ${vars} ; do
     (eval echo $x=\$$x) | sed  's/=/="/

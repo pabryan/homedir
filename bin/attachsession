@@ -3,4 +3,4 @@
 export PATH=$PATH:~/bin/
 
 grabsession
-screen -DR
+screen -xRR
