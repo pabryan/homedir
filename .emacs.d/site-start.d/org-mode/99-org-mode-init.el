@@ -129,10 +129,13 @@
 	      ("d" "Diary" entry
 	       (file+datetree "~/org/diary.org")
 	       "* Log\n%?")	       
-	      ("H" "health" )
+	      ("H" "Health")
+	      ("Hd" "Diary" entry
+	       (file+datetree+prompt "~/org/healthdiary.org")
+	       "* Stats\n:PROPERTIES:\n:weight: %?\n:rest_hr: \n:END:\n")
 	      ("Hx" "Exercise")
 	      ("Hxs" "Stretch" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	       (file+datetree+prompt "~/org/healthdiary.org")
 		     (file "~/org/capture_templates/stretch")
 		     :clock-in t :clock-resume t)
 	      ("Hxf" "Foam Roller" entry 
