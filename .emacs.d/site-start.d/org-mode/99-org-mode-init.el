@@ -60,7 +60,11 @@
 ; Alphabetical lists
 (setq org-alphabetical-lists t)
 
-;;; todo
+
+;; flyspell mode for spell checking everywhere
+(add-hook 'org-mode-hook 'flyspell-mode)
+
+;; todo
 (setq org-enforce-todo-dependencies t)
 
 (setq org-todo-keywords
