@@ -7,3 +7,5 @@ for dir in ${dirs}; do
     hg autosync -o
 done
 
+echo "bbo" > ${HOME}/tmp/bob
+
