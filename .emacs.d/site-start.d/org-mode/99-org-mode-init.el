@@ -4,7 +4,7 @@
 
 ;;; Modules
 ;(setq org-modules (quote ("org-habit")))
-
+(require 'org-checklist)
 
 ;;; Key bindings
 
@@ -446,6 +446,9 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
                             (org-agenda-skip-function 'bh/skip-non-projects)))
                 (tags "REFILE"
                       ((org-agenda-overriding-header "Tasks to Refile")
+                       (org-tags-match-list-sublevels nil)))
+                (tags "FROM_MOBILE"
+                      ((org-agenda-overriding-header "Tasks from mobile")
                        (org-tags-match-list-sublevels nil)))
                 (tags-todo "-CANCELLED-SOMEDAY/!"
                            ((org-agenda-overriding-header "Stuck Projects")
