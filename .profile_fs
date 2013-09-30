@@ -1,0 +1,2 @@
+# Mount euclid
+sshfs pbryan@euclid.ucsd.edu: ~/euclid

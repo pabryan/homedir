@@ -4,7 +4,7 @@
 
 ;;; Modules
 ;(setq org-modules (quote ("org-habit")))
-
+(require 'org-checklist)
 
 ;;; Key bindings
 
@@ -139,72 +139,72 @@
 	       "* Stats\n:PROPERTIES:\n:weight: %?\n:rest_hr: \n:END:\n")
 	      ("Hx" "Exercise")
 	      ("Hxs" "Stretch" entry 
-	       (file+datetree+prompt "~/org/healthdiary.org")
+	       (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/stretch")
 		     :clock-in t :clock-resume t)
 	      ("Hxf" "Foam Roller" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/foamroller")
 		     :clock-in t :clock-resume t)
 	      ("Hxq" "Qi Gong" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/qigong")
 		     :clock-in t :clock-resume t)
 	      ("Hxt" "Tai Ji" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/taiji")
 		     :clock-in t :clock-resume t)
 	      ("Hxy" "Yoga" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/yoga")
 		     :clock-in t :clock-resume t)
 	      ("Hxi" "Intuflow" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/intuflow")
 		     :clock-in t :clock-resume t)
 	      ("Hxa" "Ageless Mobility" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/agelessmobility")
 		     :clock-in t :clock-resume t)
 	      ("Hxv" "Thrive Flow" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/thriveflow")
 		     :clock-in t :clock-resume t)
 	      ("Hxb" "Be Breathed" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/bebreathed")
 		     :clock-in t :clock-resume t)
 	      ("Hxb" "X-Tension" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/xtension")
 		     :clock-in t :clock-resume t)
 	      ("Hxw" "Flow Fit" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/flowfit"))
 
 	      ("Hxp" "Flow Physique")
 	      ("Hxpt" "[20/12x8+60]6" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/flowphysique_twenty")
 		     :clock-in t :clock-resume t)
 	      ("Hxpf" "4/1x4" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/flowphysique_four")
 		     :clock-in t :clock-resume t)
 	      ("Hxpe" "EMOTM" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/flowphysique_emotm")
 		     :clock-in t :clock-resume t)
 	      ("Hxpa" "AMRAP" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/flowphysique_amrap")
 		     :clock-in t :clock-resume t)
 	      ("Hxpn" "[90/30x5]2" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/flowphysique_ninety")
 		     :clock-in t :clock-resume t)
 	      ("Hxpp" "AFAP" entry 
-	             (file+datetree+prompt "~/org/healthdiary.org")
+	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/flowphysique_afap")
 		     :clock-in t :clock-resume t)
 	     )))
@@ -446,6 +446,9 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
                             (org-agenda-skip-function 'bh/skip-non-projects)))
                 (tags "REFILE"
                       ((org-agenda-overriding-header "Tasks to Refile")
+                       (org-tags-match-list-sublevels nil)))
+                (tags "FROM_MOBILE"
+                      ((org-agenda-overriding-header "Tasks from mobile")
                        (org-tags-match-list-sublevels nil)))
                 (tags-todo "-CANCELLED-SOMEDAY/!"
                            ((org-agenda-overriding-header "Stuck Projects")

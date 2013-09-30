@@ -2,8 +2,10 @@
 ; This uses my-start-start available here
 ; http://porkmail.org/elisp/my-site-start/my-site-start.el
 
+(add-to-list 'load-path "~/working/external/org-mode/contrib/lisp")
 (autoload 'my-site-start "~/.emacs.d/my-site-start.el" nil t)
 (my-site-start "~/.emacs.d/site-start.d/")
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
