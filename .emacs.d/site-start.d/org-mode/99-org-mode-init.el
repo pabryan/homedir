@@ -4,7 +4,7 @@
 
 ;;; Modules
 ;(setq org-modules (quote ("org-habit")))
-(require 'org-checklist)
+;(require 'org-checklist)
 
 ;;; Key bindings
 
