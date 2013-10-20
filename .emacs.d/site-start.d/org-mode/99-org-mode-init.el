@@ -444,6 +444,9 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
 		(tags-todo "+FOCUS/!"
                            ((org-agenda-overriding-header "Focus")
                             (org-agenda-skip-function 'bh/skip-non-projects)))
+		(tags "+GOAL"
+                           ((org-agenda-overriding-header "Goals")
+                            (org-tags-match-list-sublevels nil)))
                 (tags "REFILE"
                       ((org-agenda-overriding-header "Tasks to Refile")
                        (org-tags-match-list-sublevels nil)))
