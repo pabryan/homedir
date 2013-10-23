@@ -61,8 +61,9 @@
 (setq org-alphabetical-lists t)
 
 
-;; flyspell mode for spell checking everywhere
+;; flyspell mode for spell checking everywhere with TeX mode
 (add-hook 'org-mode-hook 'flyspell-mode)
+(add-hook 'org-mode-hook (lambda () (setq ispell-parser 'tex)))
 
 ;; todo
 (setq org-enforce-todo-dependencies t)
