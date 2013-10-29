@@ -139,6 +139,9 @@
 	       (file+datetree+prompt "~/org/healthdiary.org")
 	       "* Stats\n:PROPERTIES:\n:weight: %?\n:rest_hr: \n:END:\n")
 	      ("Hx" "Exercise")
+	      ("Hxw" "Walk" entry 
+	       (file+datetree+prompt "~/org/exercisediary.org")
+		     (file "~/org/capture_templates/walk"))
 	      ("Hxs" "Stretch" entry 
 	       (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/stretch")
@@ -179,7 +182,7 @@
 	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/xtension")
 		     :clock-in t :clock-resume t)
-	      ("Hxw" "Flow Fit" entry 
+	      ("Hxl" "Flow Fit" entry 
 	             (file+datetree+prompt "~/org/exercisediary.org")
 		     (file "~/org/capture_templates/flowfit"))
 
