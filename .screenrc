@@ -14,5 +14,8 @@ screen -t sys 2
 setenv HISTFILE ${HOME}/.bash_ref_history
 screen -t ref 3
 
+setenv HISTFILE ${HOME}/.bash_publish_history
+screen -t publish 4
+
 select 1
 
