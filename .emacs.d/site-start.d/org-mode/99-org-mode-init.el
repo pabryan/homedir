@@ -5,7 +5,7 @@
 ;;; Modules
 ;(setq org-modules (quote ("org-habit")))
 ;(require 'org-checklist)
-(require org-special-blocks)
+;(require 'org-special-blocks)
 
 ;;; Key bindings
 
