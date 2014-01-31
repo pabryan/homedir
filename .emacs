@@ -3,6 +3,7 @@
 ; http://porkmail.org/elisp/my-site-start/my-site-start.el
 
 (add-to-list 'load-path "~/working/external/org-mode/contrib/lisp")
+(add-to-list 'load-path "~/.emacs.d/myelisp/")
 (autoload 'my-site-start "~/.emacs.d/my-site-start.el" nil t)
 (my-site-start "~/.emacs.d/site-start.d/")
 
