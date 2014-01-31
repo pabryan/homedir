@@ -2,7 +2,6 @@ setenv HISTFILE ${HOME}/.bash_working_history
 
 chdir ${HOME}/working
 screen -t working 0
-
 chdir
 
 setenv HISTFILE ${HOME}/.bash_general_history
@@ -14,8 +13,10 @@ screen -t sys 2
 setenv HISTFILE ${HOME}/.bash_ref_history
 screen -t ref 3
 
+chdir ${HOME}/publish
 setenv HISTFILE ${HOME}/.bash_publish_history
 screen -t publish 4
+chdir
 
 select 1
 
