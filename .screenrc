@@ -1,15 +1,10 @@
-# Record HOME variable
-setenv myhome ${HOME}
-
-# Create working window with home and histfile changed
+# Create working window with histfile changed
 setenv HISTFILE ${HOME}/.bash_working_history
-setenv HOME ${myhome}/working
-chdir ${HOME}
+chdir ${HOME}/working
 screen -t working 0
-setenv HOME ${myhome}
+chdir
 
 # Create general window with histfile changed
-chdir
 setenv HISTFILE ${HOME}/.bash_general_history
 screen -t general 1
 
@@ -21,18 +16,11 @@ screen -t sys 2
 setenv HISTFILE ${HOME}/.bash_ref_history
 screen -t ref 3
 
-# Create publish window with home and histfile changed
+# Create publish window with histfile changed
 setenv HISTFILE ${HOME}/.bash_publish_history
-setenv HOME ${myhome}/publish
-chdir ${HOME}
+chdir ${HOME}/publish
 screen -t publish 4
-setenv HOME ${myhome}
-
-
-# Restore HOME variable
-setenv HOME ${myhome}
-unsetenv myhome
-
 chdir
+
 select 1
 
