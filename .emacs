@@ -2,10 +2,16 @@
 ; This uses my-start-start available here
 ; http://porkmail.org/elisp/my-site-start/my-site-start.el
 
+;; extra packages
 (add-to-list 'load-path "~/working/external/org-mode/contrib/lisp")
 (add-to-list 'load-path "~/.emacs.d/myelisp/")
+
+;; use my-site-start
 (autoload 'my-site-start "~/.emacs.d/my-site-start.el" nil t)
 (my-site-start "~/.emacs.d/site-start.d/")
+
+;; ispell language
+(setq ispell-dictionary "british")
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
