@@ -813,6 +813,13 @@ as the default task."
 (add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
 (add-to-list 'org-export-latex-packages-alist '("all" "pabmacros" t))
 
+; for exporting with abstracts
+(defun org-export-latex-no-toc (depth)  
+    (when depth
+      (format "%% Org-mode is exporting headings to %s levels.\n"
+              depth)))
+  (setq org-export-latex-format-toc-function 'org-export-latex-no-toc)
+
 ;; there's a more official way to do this
 ;; but I don't know how to do it in .emacs!
 ;; the code below does not work anymore since org-export-latex-default-class 
