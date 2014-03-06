@@ -692,7 +692,7 @@ as the default task."
 	 ;;add a custom reftex cite format to insert links
 	 (reftex-set-cite-format
 	  '((?b . "[[bib:%l][%l-bib]]")
-	    (?c . "\cite{%l}")
+	    (?c . "\\cite{%l}")
 	    (?n . "[[notes:%l][%l-notes]]")
 	    (?p . "[[papers:%l][%l-paper]]")
 	    (?t . "%t")
