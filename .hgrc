@@ -7,7 +7,10 @@ mq =
 graphlog =
 convert = 
 autosync = ~/working/external/hg-autosync/autosync.py
+pager = 
 
 [diff]
 git = 1
 
+[pager]
+pager = LESS='FRX' less -d
