@@ -25,7 +25,6 @@
  '(browse-url-generic-program "x-www-browser")
  '(lpr-command "lpr")
  '(lpr-switches (quote ("-o sides=two-sided-long-edge")))
- '(org-agenda-files (quote ("~/org/refs.org" "/home/paul/org/academic.org" "/home/paul/org/anu.org" "/home/paul/org/diary.org" "/home/paul/org/exercisediary.org" "/home/paul/org/from-mobile.org" "/home/paul/org/goals.org" "/home/paul/org/habits.org" "/home/paul/org/hacking.org" "/home/paul/org/health.org" "/home/paul/org/healthdiary.org" "/home/paul/org/journal.org" "/home/paul/org/kate.org" "/home/paul/org/ledger.org" "/home/paul/org/lily.org" "/home/paul/org/personal.org" "/home/paul/org/processes.org" "/home/paul/org/refile.org" "/home/paul/org/remy.org" "/home/paul/org/research_notes.org" "/home/paul/org/ucsd.org" "/home/paul/org/workflow.org" "/home/paul/org/writing.org")))
  '(org-export-latex-default-packages-alist (quote (("AUTO" "inputenc" t) ("T1" "fontenc" t) ("" "fixltx2e" nil) ("" "graphicx" t) ("" "longtable" nil) ("" "float" nil) ("" "wrapfig" nil) ("" "soul" t) ("" "textcomp" t) ("" "marvosym" t) ("nointegrals" "wasysym" t) ("" "latexsym" t) ("" "amssymb" t) ("" "hyperref" nil) "\\tolerance=1000")))
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m))))
 (custom-set-faces
