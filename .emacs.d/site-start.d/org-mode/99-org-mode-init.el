@@ -829,3 +829,15 @@ as the default task."
 
 ; amsmath conflicts with waysysym and this fixes it
 ;(setcar (rassoc '("wasysym" t) org-export-latex-default-packages-alist)	"integrals")
+
+; Allow custom titles
+;; (defun ngz-enforce-my-title (contents backend info)
+;;   ;; In LaTeX export, if I defined a title with a short title, remove
+;;   ;; default title command provided by template, if any.
+;;   (if (or (not (eq backend 'e-latex))
+;;           (not (string-match "^\\\\title\\[.*\\]{.*}$" contents))
+;;           (not (string-match "^\\\\title{.*}\n" contents)))
+;;       contents
+;;     (replace-match "" nil nil contents)))
+
+;; (add-to-list 'org-export-filter-final-output-functions 'ngz-enforce-my-title)
