@@ -810,6 +810,12 @@ as the default task."
 ;               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 ;; (setq org-export-latex-default-class "my-article") 
+(add-to-list 'org-export-latex-classes
+	     '("amsart"
+	       "\\documentclass{amsart}"
+	       ("\\section{%s}" . "\\section{%s}")
+	       ("\\subsection{%s}" . "\\subsection{%s}")
+	       ("\\subsubsection{%s}" . "\\subsubsection{%s}")))
 
 ; use amsmath and my macros
 (add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
