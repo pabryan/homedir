@@ -3,3 +3,4 @@
 #+LaTeX_HEADER: \AtEveryBibitem{\clearfield{doi}}
 #+LaTeX_HEADER: \AtEveryBibitem{\clearfield{url}}
 #+LaTeX_HEADER: \AtEveryBibitem{\clearfield{issn}}
+#+LaTeX_HEADER: \renewcommand*{\bibfont}{\footnotesize}
