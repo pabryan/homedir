@@ -1,0 +1,3 @@
+# Find ssh-agent and load keys
+. "$HOME/bin/ssh-find-agent.bash"
+set_ssh_agent_socket

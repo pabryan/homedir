@@ -1,1 +1,1 @@
-/home/likewise-open/AD/pbryan/working/external/ssh-find-agent/ssh-find-agent.bash
+/home/paul/working/external/ssh-find-agent/ssh-find-agent.bash
