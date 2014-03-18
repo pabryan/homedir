@@ -811,7 +811,7 @@ as the default task."
 
 ;; (setq org-export-latex-default-class "my-article") 
 (add-to-list 'org-export-latex-classes
-	     '("amsart" "\\documentclass[11pt]{article}"
+	     '("amsart" "\\documentclass[11pt]{amsart}"
 	      ("\\section{%s}" . "\\section*{%s}")
 	      ("\\subsection{%s}" . "\\subsection*{%s}")
 	      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
