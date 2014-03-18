@@ -10,10 +10,9 @@ export VISUAL=myemacs_blocking
 export ALTERNATE_EDITOR=""
 
 # ssh setup
-#if [ -f ~/.profile_ssh ]; then
-#    . ~/.profile_ssh
-#fi
-
+if [ -f ~/.profile_ssh ]; then
+    . ~/.profile_ssh
+fi
 
 # Include subversion environment variables
 if [ -f ~/.profile_svn ]; then
@@ -38,7 +37,10 @@ fi
 # Set prompt
 export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@notebook:\w\$ '
 
-# Mount filessystesm
+# Mount filesystems
 if [ -f ~/.profile_fs ]; then
    . ~/.profile_fs
 fi
+
+# Record session variables
+grabsession
