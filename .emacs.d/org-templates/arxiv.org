@@ -24,7 +24,7 @@
 
 # Some amsart code
 #+BEGIN_COMMENT
---8<---------------cut here---------------start------------->8---
+
 #+EMAIL: address@hidden
 #+LATEX_CLASS: amsart
 
@@ -68,7 +68,7 @@ This deletes the amsart from the org-latex-classes list:
 #+BEGIN_SRC elisp
   (setq org-latex-classes (cdr org-latex-classes))
 #+END_SRC
---8<---------------cut here---------------end--------------->8---
+
 #+END_COMMENT
 
 
