@@ -795,21 +795,11 @@ as the default task."
 ;;(run-with-timer 0 (* 5 60) 'pb/org-mobile-pull-wrapper)
 
 ;; Latex settings
-; default document structure
-;(unless (boundp 'org-export-latex-classes)
-;  (setq org-export-latex-classes nil))
+; make sure this is defined before adding to it
+(unless (boundp 'org-export-latex-classes)
+  (setq org-export-latex-classes nil))
 
-;(add-to-list 'org-export-latex-classes
-;             '("my-article"
-;	       "\\documentclass{article}
-;                \\usepackage[all]{pabmacros} 
-;                \\input{margins}"    
-;                ("\\section{%s}" . "\\section*{%s}")
-;               ("\\subsection{%s}" . "\\subsection*{%s}")
-;               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-;               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-
-;; (setq org-export-latex-default-class "my-article") 
+; Allow amsart
 (add-to-list 'org-export-latex-classes
 	     '("amsart" "\\documentclass[11pt]{amsart}"
 	      ("\\section{%s}" . "\\section*{%s}")
@@ -817,6 +807,9 @@ as the default task."
 	      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
 	      ("\\paragraph{%s}" . "\\paragraph*{%s}")
 	      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+; use amsart by default
+(setq org-export-latex-default-class "amsart") 
 
 ; use amsmath and my macros
 (add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
