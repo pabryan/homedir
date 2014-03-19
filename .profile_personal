@@ -43,4 +43,4 @@ if [ -f ~/.profile_fs ]; then
 fi
 
 # Record session variables
-grabsession
+~/bin/grabsession
