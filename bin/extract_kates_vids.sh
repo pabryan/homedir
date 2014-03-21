@@ -5,5 +5,6 @@ for dir in *; do
     for file in *; do
 	tar -xf $file
     done
+    cd ..
 done
 
