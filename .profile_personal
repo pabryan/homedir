@@ -35,7 +35,7 @@ if [ -f ~/.profile_android ]; then
 fi
 
 # Set prompt
-export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@notebook:\w\$ '
+#export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@notebook:\w\$ '
 
 # Mount filesystems
 if [ -f ~/.profile_fs ]; then
