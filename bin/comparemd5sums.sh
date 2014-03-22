@@ -10,12 +10,16 @@ fi
 file1="$1"
 file2="$2"
 
-while read line; do
-    md5sum=${line:[1]}
-    file=${line:2}
 
-    echo $md5sum
-    echo $line
-    exit
+while read line; do
+    md5sum=$(echo "$line" | awk '{print $1}')
+    file=$(echo "$line" | awk '{for (i=2; i<NF; i++) printf $i " "; print $NF}')
+
+#'{for (i=2; i<=NF; i++) print $i}')
+
+    grep "${md5sum}" "${file2}" > /dev/null
+    if [ $? -ne 0 ]; then
+	echo "'${file}' has non-mathching md5sum"
+    fi
 done < "${file1}"
 
