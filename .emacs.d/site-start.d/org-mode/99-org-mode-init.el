@@ -798,6 +798,8 @@ as the default task."
 ; make sure this is defined before adding to it
 (unless (boundp 'org-export-latex-classes)
   (setq org-export-latex-classes nil))
+(unless (boundp 'org-export-latex-packages-alist)
+  (setq org-export-latex-packages-alist))
 
 ; Allow amsart
 (add-to-list 'org-export-latex-classes
