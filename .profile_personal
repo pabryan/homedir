@@ -10,7 +10,7 @@ export VISUAL=myemacs_blocking
 export ALTERNATE_EDITOR=""
 
 # Alias
-alias updatesession=". ~/session/updatesession"
+  alias updatesession=". ~/session/updatesession"
 
 # ssh setup
 if [ -f ~/.profile_ssh ]; then
