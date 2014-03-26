@@ -22,5 +22,8 @@ chdir ${HOME}/publish
 screen -t publish 4
 chdir
 
+# Emacs window
+screen -t emacs emacsclient -nw -c
+
 select 1
 
