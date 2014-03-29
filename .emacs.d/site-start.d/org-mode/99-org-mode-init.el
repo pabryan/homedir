@@ -801,6 +801,8 @@ as the default task."
 (unless (boundp 'org-export-latex-packages-alist)
   (setq org-export-latex-packages-alist))
 
+(require 'ox-latex)
+
 ; Allow amsart
 (add-to-list 'org-export-latex-classes
 	     '("amsart" "\\documentclass[11pt]{amsart}"
@@ -809,6 +811,14 @@ as the default task."
 	      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
 	      ("\\paragraph{%s}" . "\\paragraph*{%s}")
 	      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+; Beamer
+(add-to-list 'org-latex-classes
+             '("beamer"
+               "\\documentclass\[presentation\]\{beamer\}"
+               ("\\section\{%s\}" . "\\section*\{%s\}")
+               ("\\subsection\{%s\}" . "\\subsection*\{%s\}")
+               ("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}")))
 
 ; use amsart by default
 (setq org-export-latex-default-class "amsart") 
