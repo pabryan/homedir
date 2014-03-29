@@ -824,8 +824,8 @@ as the default task."
 (setq org-export-latex-default-class "amsart") 
 
 ; use amsmath and my macros
-(add-to-list 'org-export-latex-packages-alist '("" "amsmath" t))
-(add-to-list 'org-export-latex-packages-alist '("all" "pabmacros" t))
+(add-to-list 'org-latex-packages-alist '("" "amsmath" t))
+(add-to-list 'org-latex-packages-alist '("all" "pabmacros" t))
 
 ; for exporting with abstracts
 (defun org-export-latex-no-toc (depth)  
