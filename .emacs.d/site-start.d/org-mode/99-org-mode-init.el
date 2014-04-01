@@ -800,8 +800,10 @@ as the default task."
   (setq org-export-latex-classes nil))
 (unless (boundp 'org-export-latex-packages-alist)
   (setq org-export-latex-packages-alist))
+(unless (boundp 'org-latex-classes)
+  (setq org-latex-classes))
 
-(require 'ox-latex)
+;(require 'ox-latex)
 
 ; Allow amsart
 (add-to-list 'org-export-latex-classes
