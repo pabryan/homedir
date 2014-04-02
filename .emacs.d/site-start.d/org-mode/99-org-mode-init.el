@@ -798,10 +798,10 @@ as the default task."
 ; make sure this is defined before adding to it
 (unless (boundp 'org-export-latex-classes)
   (setq org-export-latex-classes nil))
-(unless (boundp 'org-export-latex-packages-alist)
-  (setq org-export-latex-packages-alist))
 (unless (boundp 'org-latex-classes)
   (setq org-latex-classes))
+(unless (boundp 'org-export-latex-packages-alist)
+  (setq org-export-latex-packages-alist))
 (unless (boundp 'org-latex-packages-alist)
   (setq org-latex-packages-alist))
 
@@ -809,21 +809,23 @@ as the default task."
 ;(require 'ox-latex)
 
 ; Allow amsart
-(add-to-list 'org-export-latex-classes
-	     '("amsart" "\\documentclass[11pt]{amsart}"
+(setq amsart '("amsart" "\\documentclass[11pt]{amsart}"
 	      ("\\section{%s}" . "\\section*{%s}")
 	      ("\\subsection{%s}" . "\\subsection*{%s}")
 	      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
 	      ("\\paragraph{%s}" . "\\paragraph*{%s}")
 	      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
-
 ; Beamer
-(add-to-list 'org-latex-classes
-             '("beamer"
+(setq beamer '("beamer"
                "\\documentclass\[presentation\]\{beamer\}"
                ("\\section\{%s\}" . "\\section*\{%s\}")
                ("\\subsection\{%s\}" . "\\subsection*\{%s\}")
                ("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}")))
+
+(add-to-list 'org-export-latex-classes amsart)
+(add-to-list 'org-latex-classes amsart)
+(add-to-list 'org-export-latex-classes beamer)
+(add-to-list 'org-latex-classes beamer)
 
 ; use amsart by default
 (setq org-export-latex-default-class "amsart") 
