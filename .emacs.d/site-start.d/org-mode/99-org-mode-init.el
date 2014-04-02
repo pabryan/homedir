@@ -802,6 +802,9 @@ as the default task."
   (setq org-export-latex-packages-alist))
 (unless (boundp 'org-latex-classes)
   (setq org-latex-classes))
+(unless (boundp 'org-latex-packages-alist)
+  (setq org-latex-packages-alist))
+
 
 ;(require 'ox-latex)
 
