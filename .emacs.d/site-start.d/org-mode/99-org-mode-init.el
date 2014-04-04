@@ -795,7 +795,7 @@ as the default task."
 ;;(run-with-timer 0 (* 5 60) 'pb/org-mobile-pull-wrapper)
 
 ;; Latex settings
-; make sure this is defined before adding to it
+; make sure these are defined before adding to it
 (unless (boundp 'org-export-latex-classes)
   (setq org-export-latex-classes nil))
 (unless (boundp 'org-latex-classes)
@@ -805,6 +805,9 @@ as the default task."
 (unless (boundp 'org-latex-packages-alist)
   (setq org-latex-packages-alist))
 
+;; little hack to handle different versions of org-mode
+(unless (boundp 'org-latex-publish-to-pdf)
+  (setq org-latex-publish-to-pdf 'org-publish-org-to-pdf))
 
 ;(require 'ox-latex)
 
