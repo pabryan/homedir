@@ -1,9 +1,16 @@
 #!/bin/bash
 
-working="${HOME}/working"
 
-cd $working
+# First ensure we have ssh identities in the agent
+updatesession # make sure we have current environment
+ssh-add 
+if [ $? -ne 0 ]; then
+    exit 2    
+fi
+
 # Mercurial controlled projects
+working="${HOME}/working"
+cd $working
 projs=$(find . -iname '.hg')
 
 # Strip trailing .hg
