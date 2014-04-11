@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # First ensure we have ssh identities in the agent
-updatesession # make sure we have current environment
+. $HOME/session/updatesession # make sure we have current environment
 ssh-add 
 if [ $? -ne 0 ]; then
     exit 2    
