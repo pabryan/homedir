@@ -3,9 +3,12 @@
 
 # First ensure we have ssh identities in the agent
 . $HOME/session/updatesession # make sure we have current environment
-ssh-add 
+ssh-add -l > /dev/null 2>&1
 if [ $? -ne 0 ]; then
-    exit 2    
+    ssh-add 
+    if [ $? -ne 0 ]; then
+	exit 2    
+    fi
 fi
 
 # Mercurial controlled projects
