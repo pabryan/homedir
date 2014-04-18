@@ -25,7 +25,8 @@
  '(browse-url-generic-program "x-www-browser")
  '(lpr-command "lpr")
  '(lpr-switches (quote ("-o sides=two-sided-long-edge")))
- '(org-export-backends (quote (ascii html icalendar latex md beamer)))
+ '(org-babel-load-languages (quote ((ruby . t))))
+ '(org-export-backends (quote (ascii html icalendar latex md beamer)) t)
  '(org-export-latex-default-packages-alist (quote (("AUTO" "inputenc" t) ("T1" "fontenc" t) ("" "fixltx2e" nil) ("" "graphicx" t) ("" "longtable" nil) ("" "float" nil) ("" "wrapfig" nil) ("" "soul" t) ("" "textcomp" t) ("" "marvosym" t) ("nointegrals" "wasysym" t) ("" "latexsym" t) ("" "amssymb" t) ("" "hyperref" nil) "\\tolerance=1000")))
  '(org-modules (quote (org-bbdb org-bibtex org-docview org-gnus org-info org-jsinfo org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m))))
 (custom-set-faces
