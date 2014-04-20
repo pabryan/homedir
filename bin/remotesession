@@ -5,8 +5,7 @@ if [ -z "$1" ]; then
     echo "$Usage: {cmd} <remote-host>" >&2
     exit 1
 fi
+
 remote_host=$1
 
-xterm -T "${remote_host} session" -e "ssh -tXA ${remote_host} ~/bin/attachsession" &
-
-
+ssh -t "${remote_host}" screen -xRR
