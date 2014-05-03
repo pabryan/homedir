@@ -809,6 +809,9 @@ as the default task."
 (unless (boundp 'org-latex-publish-to-pdf)
   (setq org-latex-publish-to-pdf 'org-publish-org-to-pdf))
 
+;; bibtex
+(setq org-latex-to-pdf-process (list "latexmk -pdf %f"))
+
 ;(require 'ox-latex)
 
 ; Allow amsart
