@@ -809,6 +809,9 @@ as the default task."
 (unless (boundp 'org-latex-publish-to-pdf)
   (setq org-latex-publish-to-pdf 'org-publish-org-to-pdf))
 
+;; bibtex
+(setq org-latex-pdf-process (list "latexmk -pdflatex='lualatex -shell-escape -interaction nonstopmode' -bibtex -pdf -f  %f"))
+
 ;(require 'ox-latex)
 
 ; Allow amsart
