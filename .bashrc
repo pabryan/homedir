@@ -106,3 +106,6 @@ fi
 if [ -f ~/.profile_personal ]; then
     . ~/.profile_personal
 fi
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
