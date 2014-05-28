@@ -794,6 +794,9 @@ as the default task."
 ;; (ie. dropbox bugs)
 ;;(run-with-timer 0 (* 5 60) 'pb/org-mobile-pull-wrapper)
 
+;; Export settings
+(setq org-export-backends '(ascii html icalendar latex md beamer odt))
+
 ;; Latex settings
 ; make sure these are defined before adding to it
 (unless (boundp 'org-export-latex-classes)
