@@ -831,10 +831,19 @@ as the default task."
                ("\\subsection\{%s\}" . "\\subsection*\{%s\}")
                ("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}")))
 
+(setq article '("article" "\\documentclass[12pt]{article}"
+	      ("\\section{%s}" . "\\section*{%s}")
+	      ("\\subsection{%s}" . "\\subsection*{%s}")
+	      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+	      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+	      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
 (add-to-list 'org-export-latex-classes amsart)
 (add-to-list 'org-latex-classes amsart)
 (add-to-list 'org-export-latex-classes beamer)
 (add-to-list 'org-latex-classes beamer)
+(add-to-list 'org-export-latex-classes article)
+(add-to-list 'org-latex-classes article)
 
 ; use amsart by default
 (setq org-export-latex-default-class "amsart") 
