@@ -1,4 +1,4 @@
-#+LaTeX_HEADER: \usepackage[bibstyle=alphabetic,citestyle=alphabetic]{biblatex}
+#+LaTeX_HEADER: \usepackage[bibstyle=alphabetic,citestyle=alphabetic,backend=bibtex]{biblatex}
 #+LaTeX_HEADER: \bibliography{refs}
 #+LaTeX_HEADER: \AtEveryBibitem{\clearfield{doi}}
 #+LaTeX_HEADER: \AtEveryBibitem{\clearfield{url}}
