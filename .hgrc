@@ -1,16 +1,1 @@
-[ui]
-username = Paul Bryan <pabryan@gmail.com>
-ignore = ~/.hgignorerc
-
-[extensions]
-mq =
-graphlog =
-convert = 
-autosync = ~/working/external/hg-autosync/autosync.py
-pager = 
-
-[diff]
-git = 1
-
-[pager]
-pager = LESS='FRX' less -d
+Dropbox/compy/homedir/.hgrc
