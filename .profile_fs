@@ -1,1 +1,2 @@
-Dropbox/compy/homedir/.profile_fs
+# Mount euclid
+#sshfs pbryan@euclid.ucsd.edu: ~/euclid

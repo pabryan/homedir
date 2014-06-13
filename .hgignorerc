@@ -1,1 +1,7 @@
-Dropbox/compy/homedir/.hgignorerc
+syntax: glob
+*~
+*.orig
+.emacs.d/.org-id-locations
+.emacs.d/org-clock-save.el
+.emacs.d/session.*
+.emacs.d/tramp

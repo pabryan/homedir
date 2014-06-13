@@ -1,1 +1,3 @@
-Dropbox/compy/homedir/.profile_tex
+confdir="${HOME}/uni/tools/tex/common/"
+export TEXINPUTS=":${TEXINPUTS}:.:${confdir}"
+export BIBINPUTS=":${BIBNPUTS}:.:${confdir}:${HOME}/org"
