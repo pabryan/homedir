@@ -26,6 +26,7 @@
  '(lpr-command "lpr")
  '(lpr-switches (quote ("-o sides=two-sided-long-edge")))
  '(org-babel-load-languages (quote ((python . t) (sh . t) (ruby . t))))
+ '(org-export-allow-bind-keywords t)
  '(org-export-backends (quote (ascii html icalendar latex md beamer odt)))
  '(org-export-latex-default-packages-alist (quote (("AUTO" "inputenc" t) ("T1" "fontenc" t) ("" "fixltx2e" nil) ("" "graphicx" t) ("" "longtable" nil) ("" "float" nil) ("" "wrapfig" nil) ("" "soul" t) ("" "textcomp" t) ("" "marvosym" t) ("nointegrals" "wasysym" t) ("" "latexsym" t) ("" "amssymb" t) ("" "hyperref" nil) "\\tolerance=1000")))
  '(org-latex-default-packages-alist (quote (("AUTO" "inputenc" t) ("T1" "fontenc" t) ("" "fixltx2e" nil) ("" "graphicx" t) ("" "longtable" nil) ("" "float" nil) ("" "wrapfig" nil) ("normalem" "ulem" t) ("" "textcomp" t) ("" "marvosym" t) ("nointegrals" "wasysym" t) ("" "latexsym" t) ("" "amssymb" t) ("" "amstext" nil) ("" "hyperref" nil) "\\tolerance=1000")))
