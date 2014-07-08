@@ -16,8 +16,10 @@ git = 1
 
 [pager]
 pager = LESS='FRX' less -d
+attend = annotate, cat, diff, export, glog, log, qdiff, wdiff
 
 [extdiff]
 cmd.wdiff = cwdiff
 #add --no-color below, if you dislike colors!
-opts.wdiff = --diff --ab --diffopts -pr
+opts.wdiff = --diff --ab
+
