@@ -8,6 +8,7 @@ graphlog =
 convert = 
 autosync = ~/working/external/hg-autosync/autosync.py
 pager = 
+color =
 
 [diff]
 git = 1
