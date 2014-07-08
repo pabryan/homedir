@@ -9,9 +9,15 @@ convert =
 autosync = ~/working/external/hg-autosync/autosync.py
 pager = 
 color =
+extdiff =
 
 [diff]
 git = 1
 
 [pager]
 pager = LESS='FRX' less -d
+
+[extdiff]
+cmd.wdiff = cwdiff
+#add --no-color below, if you dislike colors!
+opts.wdiff = --diff --ab --diffopts -pr
