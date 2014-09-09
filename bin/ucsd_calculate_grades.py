@@ -5,6 +5,7 @@ import csv
 import re
 import numpy
 import bisect
+import math
 
 def usage():
     scriptname = os.path.basename(sys.argv[0])
@@ -43,7 +44,7 @@ def getgrade(g):
     # Grade table
     gradetable =[(70.0, 'F'), (73.0, 'C-'), (77.0, 'C'), (80.0, 'C+'), (83.0, 'B-'), (87.0, 'B'), (90.0, 'B+'), (93.0, 'A-'), (97.0, 'A'), (100.0, 'A+')]
 
-    pos = bisect.bisect_right(gradetable, (round(g),))
+    pos = bisect.bisect_right(gradetable, (math.ceil(g),))
     return gradetable[pos][1]
 
 def main():
