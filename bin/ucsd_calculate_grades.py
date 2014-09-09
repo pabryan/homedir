@@ -4,10 +4,11 @@ import getopt, sys, os.path
 import csv
 import re
 import numpy
+import bisect
 
 def usage():
     scriptname = os.path.basename(sys.argv[0])
-    print("usage: " + scriptname + ' <input.csv>')
+    print("usage: " + scriptname + ' <input.csv> <output.csv>')
 
 def getopts():
     try:
@@ -30,24 +31,35 @@ def getopts():
         else:
             assert False, "unhandled option"
 
-    if len(args) != 1:
+    if len(args) != 2:
         usage()
         sys.exit(2)
 
-    filename = args[0]
-    return filename
-    
+    infilename = args[0]
+    outfilename = args[1]
+    return infilename, outfilename
+
+def getgrade(g):
+    # Grade table
+    gradetable =[(70.0, 'F'), (73.0, 'C-'), (77.0, 'C'), (80.0, 'C+'), (83.0, 'B-'), (87.0, 'B'), (90.0, 'B+'), (93.0, 'A-'), (97.0, 'A'), (100.0, 'A+')]
+
+    pos = bisect.bisect_right(gradetable, (round(g),))
+    return gradetable[pos][1]
 
 def main():
-    filename = getopts()
-    with open(filename, newline='') as csvfile:
-        studentreader = csv.DictReader(csvfile, delimiter=',', quotechar='"', skipinitialspace=True)
-        
+    infilename, outfilename = getopts()
+
+    with open(infilename, newline='') as infile, open(outfilename, 'w', newline='') as outfile:
+        studentreader = csv.DictReader(infile, delimiter=',', quotechar='"', skipinitialspace=True)
+        outfields = ['Last Name', 'First Name', 'Student ID', 'SectionId', 'Final_Assigned_Egrade', 'Score']
+        studentwriter = csv.DictWriter(outfile, outfields, delimiter=',', quotechar='"', skipinitialspace=True)
+        studentwriter.writeheader()
+
         # Get keys from first record
         s = next(studentreader)
         keys = s.keys()
         # Return reader to first record (second line in file)
-        csvfile.seek(0)
+        infile.seek(0)
         next(studentreader)
 
         # Assessment items
@@ -60,10 +72,17 @@ def main():
             assessmentitems.append({"title": assessment["title"], "keys": loopkeys, "function": assessment["function"], "weight": assessment["weight"]})
 
         for student in studentreader:
+            studentout = {}
+            studentout['Last Name'] = student['Last Name']
+            studentout['First Name'] = student['First Name']
+            studentout['Student ID'] = student['Student ID']
+            studentout['SectionId'] = student['SectionId [Total Pts: 100] |122054']
+
             scores = []
+            
             for assessmentitem in assessmentitems:
                 func = assessmentitem["function"]
-                itemscores = [float(student[k]) for k in assessmentitem["keys"]]
+                itemscores = [float(student[k]) if student[k] else 0.0 for k in assessmentitem["keys"]]
                 itempoints = numpy.array([float(re.search(pointspattern, k).group(1)) for k in assessmentitem["keys"]])
                 itempercentages = numpy.divide(itemscores, itempoints)
                 total = func(itempercentages)
@@ -73,14 +92,11 @@ def main():
                 
 
             weightedscore = sum(score["weightedtotal"] for score in scores)
+            studentout['Final_Assigned_Egrade'] = getgrade(weightedscore)
+            studentout['Score'] = weightedscore
 
-
- # with open('eggs.csv', 'w', newline='') as csvfile:
- #    spamwriter = csv.writer(csvfile, delimiter=' ',
- #                            quotechar='|', quoting=csv.QUOTE_MINIMAL)
- #    spamwriter.writerow(['Spam'] * 5 + ['Baked Beans'])
- #    spamwriter.writerow(['Spam', 'Lovely Spam', 'Wonderful Spam'])
-
+            studentwriter.writerow(studentout)
+            
 
 if __name__ == "__main__":
     main()
