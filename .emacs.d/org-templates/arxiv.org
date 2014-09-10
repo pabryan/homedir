@@ -1,0 +1,104 @@
+#+BIND: org-latex-title-command ""
+
+#+Latex: \runningtitle{SHORT TITLE}
+#+Latex: \runningauthor{SHORT AUTHOR}
+#+Latex: \correspondence{AUTHOR NAME\\ EMAIL}
+#+Latex: \affil{YOUR UNIVERSITY}
+#+Latex: \author[2,*]{SECOND AUTHOR}
+#+Latex: \author[1]{THIRD AUTHOR SAME INSTITUTE}
+#+Latex: \affil[2]{SECOND UNIVERSITY}
+#+Latex: \affil[*]{now at: THIRD UNIVERSITY}
+
+#+Latex: \received{}
+#+Latex: \pubdiscuss{}
+#+Latex: \revised{}
+#+Latex: \accepted{}
+#+Latex: \published{}
+#+Latex: %% These dates will be inserted by ACPD
+#+Latex: \firstpage{1}
+
+#+Latex: \maketitle
+
+#+Latex: \introduction
+# * Introduction
+
+# Some amsart code
+#+BEGIN_COMMENT
+
+#+EMAIL: address@hidden
+#+LATEX_CLASS: amsart
+
+* foo
+bar
+
+* code                                                                          
+                              :noexport:
+This should probably go in some initialization file - for testing, I just 
+executed
+the code blocks by hand:
+
+#+name: email-filter
+#+BEGIN_SRC elisp :results none
+  (defun nd-email-filter (contents backend info)
+    (let ((email (plist-get info :email)))
+      (replace-regexp-in-string "@EMAIL@" email contents t)))
+  
+  (add-to-list 'org-export-filter-final-output-functions (function 
+nd-email-filter))
+#+END_SRC
+
+#+name: amsart
+#+BEGIN_SRC elisp :results none
+  (setq amsart-class
+        '("amsart"
+          "\\documentclass{amsart}
+            [DEFAULT-PACKAGES]
+            [PACKAGES]
+            [EXTRA]
+            address@hidden@ }"
+            ("\\section{%s}" . "\\section{%s}")
+             ("\\subsection{%s}" . "\\subsection{%s}")
+             ("\\subsubsection{%s}" . "\\subsubsection{%s}")))
+  
+  (add-to-list 'org-latex-classes amsart-class)
+#+END_SRC
+
+This deletes the amsart from the org-latex-classes list:
+
+#+BEGIN_SRC elisp
+  (setq org-latex-classes (cdr org-latex-classes))
+#+END_SRC
+
+#+END_COMMENT
+
+
+#+BEGIN_COMMENT
+(require 'cl-lib)
+(defun any (x) (cl-reduce (lambda (x y) (if x x y)) x))
+ 
+;; For certain latex classes, the org-mode default of \author{NAME\thanks{EMAIL}}
+;; isn't what the class wants
+(defvar org-latex-classes-with-email '("amsart" "amsbook"))
+ 
+;; After completing latex export, check if we are in one of the classes listed in 'org-latex-classes-with-email;
+;; if we are, we need to
+;; 1) Remove the \thanks{} macro inside \author{}
+;; 2) Add an \email{} macro
+;; This can be done with a single regex replace using captures.
+(defun org-latex-classes-with-email-filter (contents backend info)
+  (if (any (mapcar (lambda (x) (string-match x contents)) org-latex-classes-with-email))
+      (replace-regexp-in-string "\\\\author{\\(.*\\)\\\\thanks{\\(.*\\)}}" "\\\\author{\\1}\n\\\\email{\\2}" contents)))
+ 
+;; Thanks to Nick Dokos for the filter setup help --http://lists.gnu.org/archive/html/emacs-orgmode/2014-02/msg00130.html
+(add-to-list 'org-export-filter-final-output-functions (function org-latex-classes-with-email-filter))
+#+END_COMMENT
+
+# Local Variables:
+# org-export-allow-bind-keywords: t
+# End:
+
+# Get the snapshot package, and use it in your document with the usual \usepackage{snapshot}
+# Run latex etc. on your document until it’s happy (note, I use pdflatex pretty much exclusively these days, but arXiv will use good o’ DVI-producing latex, so that’s what you need to use when producing your submission)
+# If your document was called mydoc.tex, you will now have a dependencies file, mydoc.dep. This can be used to bundle your source files for submission. To do this, get bundledoc.
+# Run bundledoc on the deps file — you may need to provide an explicit config file. Here’s my command: bundledoc --config=$HOME/local/texmf/tex/latex/bundledoc/tetex.cfg mydoc.dep
+# You now have a tarball or zip archive, depending on whether you used the TeTeX/TeX Live or MikTeX config file. This should be okay for uploading to arXiv. Happy bundling.

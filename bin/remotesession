@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cmd=`basename $0`
+if [ -z "$1" ]; then
+    echo "$Usage: {cmd} <remote-host>" >&2
+    exit 1
+fi
+
+remote_host=$1
+
+ssh -t "${remote_host}" screen -xRR

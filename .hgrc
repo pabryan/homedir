@@ -1,0 +1,25 @@
+[ui]
+username = Paul Bryan <pabryan@gmail.com>
+ignore = ~/.hgignorerc
+
+[extensions]
+mq =
+graphlog =
+convert = 
+autosync = ~/working/external/hg-autosync/autosync.py
+pager = 
+color =
+extdiff =
+
+[diff]
+git = 1
+
+[pager]
+pager = LESS='FRX' less -d
+attend = annotate, cat, diff, export, glog, log, qdiff, wdiff
+
+[extdiff]
+cmd.wdiff = cwdiff
+#add --no-color below, if you dislike colors!
+opts.wdiff = --diff --ab
+

@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bundledoc --config="$HOME/texmf/tex/latex/bundledoc/texlive-unix.cfg" $@

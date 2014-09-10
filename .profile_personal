@@ -1,0 +1,49 @@
+# Localisation
+export LANGUAGE="en_AU:en"
+export LC_MESSAGES="en_AU.UTF-8"
+export LC_CTYPE="en_AU.UTF-8"
+export LC_COLLATE="en_AU.UTF-8"
+
+# Editor
+export EDITOR=myemacs_blocking
+export VISUAL=myemacs_blocking
+export ALTERNATE_EDITOR=""
+
+# Alias
+  alias updatesession=". ~/session/updatesession"
+
+# ssh setup
+if [ -f ~/.profile_ssh ]; then
+    . ~/.profile_ssh
+fi
+
+# Include subversion environment variables
+if [ -f ~/.profile_svn ]; then
+    . ~/.profile_svn
+fi
+
+# Include python setup
+if [ -f ~/.profile_svn ]; then
+    . ~/.profile_svn
+fi
+
+# TeX setup
+if [ -f ~/.profile_tex ]; then
+    . ~/.profile_tex
+fi
+
+# Android devel
+if [ -f ~/.profile_android ]; then
+    . ~/.profile_android
+fi
+
+# Set prompt
+#export PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\u@notebook:\w\$ '
+
+# Mount filesystems
+if [ -f ~/.profile_fs ]; then
+   . ~/.profile_fs
+fi
+
+# Record session variables
+~/bin/grabsession
