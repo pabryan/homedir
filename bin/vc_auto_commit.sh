@@ -10,6 +10,11 @@ if [ $? -ne 0 ]; then
     fi
 fi
 
+# Set up a ssh control master
+remote="hg@bitbucket.org"
+socket="~/tmp/sockets/${remote}:22"
+ssh -Nf -M -S "${socket}" "${remote}"
+
 dirs="${HOME}/org ${HOME}/Dropbox/${HOSTNAME}/homedir"
 
 for dir in ${dirs}; do
@@ -17,4 +22,4 @@ for dir in ${dirs}; do
     hg autosync -o
 done
 
-
+ssh -O exit -S "${socket}" "${remote}"
