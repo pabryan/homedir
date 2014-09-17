@@ -10,10 +10,7 @@ if [ $? -ne 0 ]; then
     fi
 fi
 
-# Set up a ssh control master
-remote="hg@bitbucket.org"
-socket="~/tmp/sockets/${remote}:22"
-ssh -Nf -M -S "${socket}" "${remote}"
+ssh_control_master.sh "hg@bitbucket.org"
 
 dirs="${HOME}/org ${HOME}/Dropbox/${HOSTNAME}/homedir"
 
@@ -22,5 +19,3 @@ for dir in ${dirs}; do
     hg autosync -o
 done
 
-# Close ssh control master
-ssh -O exit -S "${socket}" "${remote}"
