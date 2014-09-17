@@ -11,6 +11,11 @@ if [ $? -ne 0 ]; then
     fi
 fi
 
+# Set up a ssh control master
+remote="hg@bitbucket.org"
+socket="~/tmp/sockets/${remote}:22"
+ssh -Nf -M -S "${socket}" "${remote}"
+
 # Mercurial controlled projects
 working="${HOME}/working"
 cd $working
@@ -49,3 +54,6 @@ for proj in ${projs}; do
 
   cd $working
 done
+
+# Close ssh control master
+ssh -O exit -S "${socket}" "${remote}"

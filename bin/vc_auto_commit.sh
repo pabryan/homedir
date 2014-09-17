@@ -22,4 +22,5 @@ for dir in ${dirs}; do
     hg autosync -o
 done
 
+# Close ssh control master
 ssh -O exit -S "${socket}" "${remote}"
