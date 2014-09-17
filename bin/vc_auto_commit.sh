@@ -10,6 +10,7 @@ if [ $? -ne 0 ]; then
     fi
 fi
 
+# Set up a multiplexed connection
 ssh_control_master.sh "hg@bitbucket.org"
 
 dirs="${HOME}/org ${HOME}/Dropbox/${HOSTNAME}/homedir"
