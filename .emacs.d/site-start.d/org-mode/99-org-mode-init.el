@@ -58,6 +58,10 @@
 ; Rereads org files if changed on disk
 (setq global-auto-revert-mode t)
 
+; property inheritance 
+; can easily set effort for related tasks, e.g. lecture planning
+(setq org-use-property-inheritance t)
+
 ; Alphabetical lists
 (setq org-alphabetical-lists t)
 
