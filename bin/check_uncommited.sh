@@ -15,6 +15,16 @@ working="${HOME}/working"
 cd $working
 projs=$(find . -iname '.hg')
 
+# Catch interrupt
+interrupt()
+{
+  echo -en "\n Caught interrupt SIGNINT. Exiting. \n"
+  exit 0
+}
+ 
+# trap keyboard interrupt (control-c)
+trap interrupt SIGINT
+
 # Strip trailing .hg
 for proj in ${projs}; do
   proj="${proj%.hg}"
