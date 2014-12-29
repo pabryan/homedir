@@ -21,13 +21,14 @@
 \newcommand{\surface}[1][M]{\mathcal{#1}}
 \newcommand{\pushforward}[1]{#1_{\star}}
 \newcommand{\pullback}[1]{#1^{\star}}
-\newcommand{\mfold}[1][M]{\mathop{#1}}
+\newcommand{\manifold}[1][M]{\mathop{#1}}
 \DeclareMathOperator{\diffeo}{\simeq}
 \DeclareMathOperator{\lie}{\mathcal{L}}
 \DeclareMathOperator{\conx}{\nabla}
-\newcommand{\tangentbundle}[1][M]{\ensuremath{T{#1}}}
-\newcommand{\tangentspace}[2][M]{\ensuremath{T_{#2}{#1}}}
-\newcommand{\dualtangentspace}[2][M]{\ensuremath{T^{\star}_{#2}{#1}}}
-\newcommand{\dualtangentbundle}[1][M]{\ensuremath{T^{\asterix}{#1}}}
-\newcommand{\orthogonalbundle}[1][M]{\ensuremath{O{#1}}}
+\newcommand{\tangentbundle}[1][\manifold]{\ensuremath{T{#1}}}
+\newcommand{\tangentspace}[2][\manifold]{\ensuremath{T_{#2}{#1}}}
+\newcommand{\dualtangentspace}[2][\manifold]{\ensuremath{T^{\star}_{#2}{#1}}}
+\newcommand{\dualtangentbundle}[1][\manifold]{\ensuremath{T^{\asterix}{#1}}}
+\newcommand{\orthogonalbundle}[1][\manifold]{\ensuremath{O{#1}}}
+\newcommand{\sections}[2][\manifold]{\ensuremath{\Gamma({#1}{#2})}}
 
