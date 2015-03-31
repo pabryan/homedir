@@ -741,10 +741,10 @@ as the default task."
 	("cn-to-en" . "http://translate.google.com/#zh-CN/en/%s")))
 
 ;; Open pdf's in org-mode
-(eval-after-load "org"
-  '(progn
-     ;; Change .pdf association directly within the alist
-     (setcdr (assoc "\\.pdf\\'" org-file-apps) "emacsclient --alternate-editor '' %s")))
+;; (eval-after-load "org"
+;;   '(progn
+;;      ;; Change .pdf association directly within the alist
+;;      (setcdr (assoc "\\.pdf\\'" org-file-apps) "xdg-open %s")))
 
 ;; mobile org
 (setq org-mobile-directory "~/Dropbox/mobileorg")
