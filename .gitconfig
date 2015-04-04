@@ -3,3 +3,5 @@
 	email = pabryan@gmail.com
 [core]
 	editor = myemacs_blocking
+[alias]
+	ci = commit -a
