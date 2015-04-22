@@ -2,7 +2,7 @@
 
 # Make sure the agent is running
 if [ -z "$SSH_AUTH_SOCK" ] ; then
-  eval $(ssh-agent$)
+  eval $(ssh-agent)
 fi
 
 # Only add if we don't already have a key
