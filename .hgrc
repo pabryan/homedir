@@ -10,6 +10,7 @@ autosync = ~/working/external/hg-autosync/autosync.py
 pager = 
 color =
 extdiff =
+record = 
 
 [diff]
 git = 1
