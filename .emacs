@@ -25,7 +25,6 @@
  '(browse-url-generic-program "x-www-browser")
  '(lpr-command "lpr")
  '(lpr-switches (quote ("-o sides=two-sided-long-edge")))
- '(org-agenda-files (quote ("/home/paul/org/academic.org" "/home/paul/org/anu.org" "/home/paul/org/daythemes.org" "/home/paul/org/diary.org" "/home/paul/org/exercisediary.org" "/home/paul/org/from-mobile.org" "/home/paul/org/goals.org" "/home/paul/org/habits.org" "/home/paul/org/hacking.org" "/home/paul/org/health.org" "/home/paul/org/healthdiary.org" "/home/paul/org/journal.org" "/home/paul/org/kate.org" "/home/paul/org/ledger.org" "/home/paul/org/lily.org" "/home/paul/org/personal.org" "/home/paul/org/processes.org" "/home/paul/org/refile.org" "/home/paul/org/remy.org" "/home/paul/org/research_notes.org" "/home/paul/org/ucsd.org" "/home/paul/org/workflow.org" "/home/paul/org/writing.org")))
  '(org-babel-load-languages (quote ((python . t) (sh . t) (ruby . t))))
  '(org-export-allow-bind-keywords t)
  '(org-export-backends (quote (ascii html icalendar latex md beamer odt)))
