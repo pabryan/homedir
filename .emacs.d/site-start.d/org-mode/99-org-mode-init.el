@@ -4,7 +4,7 @@
 
 ;;; Modules
 ;(setq org-modules (quote ("org-habit")))
-(require 'org-checklist)
+;(require 'org-checklist)
 ;(require 'org-special-blocks)
 
 ;;; Key bindings
@@ -747,35 +747,35 @@ as the default task."
 ;;      (setcdr (assoc "\\.pdf\\'" org-file-apps) "xdg-open %s")))
 
 ;; mobile org
-(setq org-mobile-directory "~/Dropbox/mobileorg")
+;; (setq org-mobile-directory "~/Dropbox/mobileorg")
 
-;; My mobile org wrappers
-(defun pb/org-mobile-push-wrapper ()
-  "push to multiple mobileorg targets"
-  (interactive)
-  (setq org-mobile-directory "~/Dropbox/tablet/mobileorg")
-  (org-mobile-push)
-  (setq org-mobile-directory "~/Dropbox/phone/mobileorg")
-  (org-mobile-push))
+;; ;; My mobile org wrappers
+;; (defun pb/org-mobile-push-wrapper ()
+;;   "push to multiple mobileorg targets"
+;;   (interactive)
+;;   (setq org-mobile-directory "~/Dropbox/tablet/mobileorg")
+;;   (org-mobile-push)
+;;   (setq org-mobile-directory "~/Dropbox/phone/mobileorg")
+;;   (org-mobile-push))
 
-(defun pb/org-mobile-pull-wrapper()
-  "pull from multiple mobileorg targets"
-  (interactive)
-  (setq org-mobile-directory "~/Dropbox/tablet/mobileorg")
-  (org-mobile-pull)
-  (setq org-mobile-directory "~/Dropbox/phone/mobileorg")
-  (org-mobile-pull))
+;; (defun pb/org-mobile-pull-wrapper()
+;;   "pull from multiple mobileorg targets"
+;;   (interactive)
+;;   (setq org-mobile-directory "~/Dropbox/tablet/mobileorg")
+;;   (org-mobile-pull)
+;;   (setq org-mobile-directory "~/Dropbox/phone/mobileorg")
+;;   (org-mobile-pull))
   
 ; push automatically
 ;;(defvar org-mobile-push-timer nil
 ;;  "Timer that `org-mobile-push-timer' used to reschedule itself, or nil.")
 
-(defun org-mobile-push-with-delay (secs)
-  (when org-mobile-push-timer
-    (cancel-timer org-mobile-push-timer))
-  (setq org-mobile-push-timer
-        (run-with-idle-timer
-         (* 1 secs) nil 'pb/org-mobile-push-wrapper)))
+;; (defun org-mobile-push-with-delay (secs)
+;;   (when org-mobile-push-timer
+;;     (cancel-timer org-mobile-push-timer))
+;;   (setq org-mobile-push-timer
+;;         (run-with-idle-timer
+;;          (* 1 secs) nil 'pb/org-mobile-push-wrapper)))
 
 ;;(add-hook 'after-save-hook 
 ;; (lambda () 
@@ -789,15 +789,15 @@ as the default task."
 ;;(run-at-time "00:05" 86400 '(lambda () (org-mobile-push-with-delay 1))) 
 
 ;; pull automatically
-(pb/org-mobile-pull-wrapper) ;; run org-mobile-pull at startup
+;; (pb/org-mobile-pull-wrapper) ;; run org-mobile-pull at startup
 
-(defun install-monitor (file secs)
-  (run-with-timer
-   0 secs
-   (lambda (f p)
-     (unless (< p (second (time-since (elt (file-attributes f) 5))))
-       (pb/org-mobile-pull-wrapper)))
-   file secs))
+;; (defun install-monitor (file secs)
+;;   (run-with-timer
+;;    0 secs
+;;    (lambda (f p)
+;;      (unless (< p (second (time-since (elt (file-attributes f) 5))))
+;;        (pb/org-mobile-pull-wrapper)))
+;;    file secs))
 
 ;;(install-monitor (file-truename
 ;;                  (concat
