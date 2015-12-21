@@ -813,6 +813,11 @@ as the default task."
 (setq org-export-backends '(ascii html icalendar latex md beamer odt))
 
 ;; Latex settings
+
+; syntax highlighting
+(eval-after-load 'org
+  '(setf org-highlight-latex-and-related '(latex scripts entities)))
+
 ; make sure these are defined before adding to it
 (unless (boundp 'org-export-latex-classes)
   (setq org-export-latex-classes nil))
