@@ -4,6 +4,8 @@
 
 ;; extra packages
 (add-to-list 'load-path "~/working/external/org-mode/contrib/lisp")
+(add-to-list 'load-path "~/working/external/magit")
+(add-to-list 'load-path "~/.emacs.d/myelisp/")
 (add-to-list 'load-path "~/.emacs.d/myelisp/")
 
 ;; use my-site-start

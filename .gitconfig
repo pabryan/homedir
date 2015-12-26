@@ -20,3 +20,7 @@
 	up = pull --rebase --prune
 [merge]
 	log = true
+
+[github]
+	user = pabryan
+	token = 6f6549fa3d9a3d7cb7a3984c511736de18a52c22

@@ -9,8 +9,11 @@ export EDITOR=myemacs_blocking
 export VISUAL=myemacs_blocking
 export ALTERNATE_EDITOR=""
 
-# Alias
-  alias updatesession=". ~/session/updatesession"
+# git setup
+if [ -f ~/.profile_git ]; then
+    . ~/.profile_git
+fi
+
 
 # ssh setup
 if [ -f ~/.profile_ssh ]; then
