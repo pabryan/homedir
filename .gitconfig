@@ -5,6 +5,7 @@
 	email = pabryan@gmail.com
 [core]
 	editor = myemacs_blocking
+	excludesfile = ~/.gitignore_global
 [alias]
 	ci = commit -a
 	co = checkout

@@ -9,6 +9,9 @@ export EDITOR=myemacs_blocking
 export VISUAL=myemacs_blocking
 export ALTERNATE_EDITOR=""
 
+# Set Path
+export PATH="$HOME/bin:$PATH"
+
 # git setup
 if [ -f ~/.profile_git ]; then
     . ~/.profile_git
