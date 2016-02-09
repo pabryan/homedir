@@ -1,12 +1,24 @@
-;;; Auto load init files using in site-start directory
-; This uses my-start-start available here
-; http://porkmail.org/elisp/my-site-start/my-site-start.el
+;;; Make sure org-mode package is loaded before anything else (including system package)
+(require 'package)
+(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+
+(package-initialize)
+(unless package-archive-contents    ;; Refresh the packages descriptions
+  (package-refresh-contents))
+(setq package-load-list '(all))     ;; List of packages to load
+;;; For installing org-mode to latest package. I don't always want to do this so it's commented for the moment.
+;; (unless (package-installed-p 'org)  ;; Make sure the Org package is
+;;   (package-install 'org))           ;; installed, install it if not
+(package-initialize)                ;; Initialize & Install Package
 
 ;; extra packages
-(add-to-list 'load-path "~/working/external/org-mode/contrib/lisp")
 (add-to-list 'load-path "~/working/external/magit")
 (add-to-list 'load-path "~/.emacs.d/myelisp/")
 (add-to-list 'load-path "~/.emacs.d/myelisp/")
+
+;;; Auto load init files using in site-start directory
+; This uses my-start-start available here
+; http://porkmail.org/elisp/my-site-start/my-site-start.el
 
 ;; use my-site-start
 (autoload 'my-site-start "~/.emacs.d/my-site-start.el" nil t)
