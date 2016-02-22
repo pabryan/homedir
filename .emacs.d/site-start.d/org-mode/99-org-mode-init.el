@@ -843,7 +843,8 @@ as the default task."
 ;(require 'ox-latex)
 
 ; Allow amsart
-(setq amsart '("amsart" "\\documentclass[11pt]{amsart}"
+(setq amsart '("amsart" "\\documentclass[11pt]{amsart}
+                        \\usepackage[all]{pabmacros}"
 	      ("\\section{%s}" . "\\section*{%s}")
 	      ("\\subsection{%s}" . "\\subsection*{%s}")
 	      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
@@ -851,17 +852,30 @@ as the default task."
 	      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 ; Beamer
 (setq beamer '("beamer"
-               "\\documentclass\[presentation\]\{beamer\}"
+               "\\documentclass\[presentation\]\{beamer\}
+                \\usepackage[allbutthm]{pabmacros}"
                ("\\section\{%s\}" . "\\section*\{%s\}")
                ("\\subsection\{%s\}" . "\\subsection*\{%s\}")
                ("\\subsubsection\{%s\}" . "\\subsubsection*\{%s\}")))
 
-(setq article '("article" "\\documentclass[12pt]{article}"
+(setq article '("article" "\\documentclass[12pt]{article}
+                           \\usepackage[all]{pabmacros}"
 	      ("\\section{%s}" . "\\section*{%s}")
 	      ("\\subsection{%s}" . "\\subsection*{%s}")
 	      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
 	      ("\\paragraph{%s}" . "\\paragraph*{%s}")
 	      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
+(setq exams '("exams" "\\documentclass{exams}
+                       [NO-DEFAULT-PACKAGES]
+                       \\usepackage{hyperref}
+                       \\usepackage[allbutthm]{pabmacros}"
+	      ("\\begin{exam}[%s]" "\\end{exam}")
+	      ("\\begin{question}[%s]" "\\end{question}")
+	      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+	      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+	      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
 
 (add-to-list 'org-export-latex-classes amsart)
 (add-to-list 'org-latex-classes amsart)
@@ -869,13 +883,15 @@ as the default task."
 (add-to-list 'org-latex-classes beamer)
 (add-to-list 'org-export-latex-classes article)
 (add-to-list 'org-latex-classes article)
+(add-to-list 'org-export-latex-classes exams)
+(add-to-list 'org-latex-classes exams)
 
 ; use amsart by default
 (setq org-export-latex-default-class "amsart") 
 
 ; use amsmath and my macros
 (add-to-list 'org-latex-packages-alist '("" "amsmath" t))
-(add-to-list 'org-latex-packages-alist '("all" "pabmacros" t))
+;; (add-to-list 'org-latex-packages-alist '("all" "pabmacros" t))
 
 ; for exporting with abstracts
 (defun org-export-latex-no-toc (depth)  
