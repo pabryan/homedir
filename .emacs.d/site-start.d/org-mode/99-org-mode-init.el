@@ -876,6 +876,16 @@ as the default task."
 	      ("\\paragraph{%s}" . "\\paragraph*{%s}")
 	      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
+(setq examsolutions '("examsolutions" "\\documentclass{exams}
+                       [NO-DEFAULT-PACKAGES]
+                       \\usepackage{hyperref}
+                       \\usepackage[allbutthm]{pabmacros}"
+	      ("\\begin{exam}[%s]" "\\end{exam}")
+	      ("\\begin{solution}[%s]" "\\end{solution}")
+	      ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+	      ("\\paragraph{%s}" . "\\paragraph*{%s}")
+	      ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
 
 (add-to-list 'org-export-latex-classes amsart)
 (add-to-list 'org-latex-classes amsart)
@@ -885,6 +895,7 @@ as the default task."
 (add-to-list 'org-latex-classes article)
 (add-to-list 'org-export-latex-classes exams)
 (add-to-list 'org-latex-classes exams)
+(add-to-list 'org-latex-classes examsolutions)
 
 ; use amsart by default
 (setq org-export-latex-default-class "amsart") 
