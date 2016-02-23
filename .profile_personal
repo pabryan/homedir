@@ -12,6 +12,11 @@ export ALTERNATE_EDITOR=""
 # Set Path
 export PATH="$HOME/bin:$PATH"
 
+# Aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
 # git setup
 if [ -f ~/.profile_git ]; then
     . ~/.profile_git
