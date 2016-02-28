@@ -11,7 +11,6 @@ for dir in ${dirs}; do
 	name=$(basename -s '.VOB' ${file})
 	nice -n 19 avconv -i ${file} -vcodec mpeg4 -q 1 -strict experimental ${name}.mp4
 	androidvideo.sh ${name}.mp4
-	rm -f $file
     done
     cd ${basedir}
 done
