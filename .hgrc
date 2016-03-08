@@ -1,6 +1,7 @@
 [ui]
 username = Paul Bryan <pabryan@gmail.com>
 ignore = ~/.hgignorerc
+merge = internal:merge3
 
 [extensions]
 mq =
