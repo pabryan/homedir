@@ -28,7 +28,7 @@
 	  :base-directory ,org-src-path
 	  :publishing-directory ,org-publish-path
 	  :recursive t
-	  :base-extension "tex\\|pdf\\|jpg\\|png\\|gif\\|htm\\|html"
+	  :base-extension "tex\\|pdf\\|jpg\\|png\\|gif\\|htm\\|html\\|sty\\|cls"
 	  :publishing-function org-publish-attachment
 	  )
 
