@@ -460,6 +460,9 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
 		(tags-todo "+FOCUS&RESEARCH&WRITING/!"
                            ((org-agenda-overriding-header "Research Writing")
                             (org-agenda-skip-function 'bh/skip-non-projects)))
+		(tags-todo "+FOCUS&JOURNAL/!"
+                           ((org-agenda-overriding-header "Journals")
+                            (org-tags-match-list-sublevels nil)))
 		(tags-todo "+FOCUS&TEACHING/!"
                            ((org-agenda-overriding-header "Teaching")
                             (org-agenda-skip-function 'bh/skip-non-projects)))
@@ -472,6 +475,12 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
                 (tags "FROM_MOBILE"
                       ((org-agenda-overriding-header "Tasks from mobile")
                        (org-tags-match-list-sublevels nil)))))
+
+              ("r" "Tasks to Refile" tags "REFILE"
+               ((org-agenda-overriding-header "Tasks to Refile")
+                (org-tags-match-list-sublevels nil)))
+	      )))
+
                ;;  (tags-todo "-CANCELLED-SOMEDAY/!"
                ;;             ((org-agenda-overriding-header "Stuck Projects")
                ;;              (org-agenda-skip-function 'bh/skip-non-stuck-projects)))                
@@ -508,10 +517,6 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
                ;;         (org-agenda-skip-function 'bh/skip-non-archivable-tasks)
                ;;         (org-tags-match-list-sublevels nil))))
                ;; nil)		
-              ("r" "Tasks to Refile" tags "REFILE"
-               ((org-agenda-overriding-header "Tasks to Refile")
-                (org-tags-match-list-sublevels nil)))
-	      )))
 
               ;; ("#" "Stuck Projects" tags-todo "-CANCELLED/!"
               ;;  ((org-agenda-overriding-header "Stuck Projects")
