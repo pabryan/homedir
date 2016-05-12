@@ -460,7 +460,7 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
 		(tags-todo "+FOCUS&RESEARCH&WRITING/!"
                            ((org-agenda-overriding-header "Research Writing")
                             (org-agenda-skip-function 'bh/skip-non-projects)))
-		(tags-todo "+FOCUS&JOURNAL/!"
+		(tags-todo "+FOCUS&JOURNALS/!"
                            ((org-agenda-overriding-header "Journals")
                             (org-tags-match-list-sublevels nil)))
 		(tags-todo "+FOCUS&TEACHING/!"
@@ -469,7 +469,7 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
 		(tags "+GOAL"
                            ((org-agenda-overriding-header "Goals")
                             (org-tags-match-list-sublevels nil)))
-                (tags "REFILE"
+                (tags-todo "REFILE"
                       ((org-agenda-overriding-header "Tasks to Refile")
                        (org-tags-match-list-sublevels nil)))
                 (tags "FROM_MOBILE"
