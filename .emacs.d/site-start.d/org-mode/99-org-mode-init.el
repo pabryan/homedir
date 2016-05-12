@@ -454,11 +454,8 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
                  '(todo-state-down effort-up category-keep))))
               (" " "Agenda"
                ((agenda "" nil)
-		(tags-todo "+FOCUS&RESEARCH&INPROGRESS/!"
-                           ((org-agenda-overriding-header "Research In Progress")
-                            (org-agenda-skip-function 'bh/skip-non-projects)))
-		(tags-todo "+FOCUS&RESEARCH&WRITING/!"
-                           ((org-agenda-overriding-header "Research Writing")
+		(tags-todo "+FOCUS&RESEARCH/!"
+                           ((org-agenda-overriding-header "Research")
                             (org-agenda-skip-function 'bh/skip-non-projects)))
 		(tags-todo "+FOCUS&JOURNALS/!"
                            ((org-agenda-overriding-header "Journals")
