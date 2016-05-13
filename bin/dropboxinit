@@ -1,8 +1,8 @@
 #!/bin/sh
 #dropbox service
-DROPBOX_USERS="AD\pbryan"
+DROPBOX_USERS="u1571708"
  
-DAEMON=.dropbox-dist/dropbox
+DAEMON=.dropbox-dist/dropboxd
  
 start() {
    echo "Starting dropbox..."
