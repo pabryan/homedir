@@ -23,7 +23,7 @@ screen -t publish 4
 chdir
 
 # Emacs window
-screen -t emacs emacsclient -nw -c
+screen -t emacs emacsclient -nw -c --alternate-editor=""
 
 select 1
 
