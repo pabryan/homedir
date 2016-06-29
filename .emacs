@@ -12,9 +12,8 @@
 (package-initialize)                ;; Initialize & Install Package
 
 ;; extra packages
-(add-to-list 'load-path "~/working/external/magit")
-(add-to-list 'load-path "~/.emacs.d/myelisp/")
-(add-to-list 'load-path "~/.emacs.d/myelisp/")
+;;(add-to-list 'load-path "~/working/external/magit")
+;;(add-to-list 'load-path "~/.emacs.d/myelisp/")
 
 ;;; Auto load init files using in site-start directory
 ; This uses my-start-start available here
