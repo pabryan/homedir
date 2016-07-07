@@ -5,9 +5,10 @@
 (setq org-agenda-files (quote ("~/org")))
 
 ;;; Modules
+(add-to-list 'load-path "/usr/share/org-mode/lisp/")
 ;(setq org-modules (quote ("org-habit")))
-;;(require 'org-checklist)
-;(require 'org-special-blocks)
+(load-library "org-checklist")
+;;(load-library "org-special-blocks")
 
 ;;; Key bindings
 
