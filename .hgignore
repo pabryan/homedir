@@ -1,5 +1,1 @@
-syntax: regexp
-^\.emacs\.d/auto-save-list/.*
-
-syntax: glob
-*~
+Dropbox/riemann/homedir/.hgignore

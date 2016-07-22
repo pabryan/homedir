@@ -1,3 +1,1 @@
-confdir="${HOME}/uni/tools/tex/common/"
-export TEXINPUTS=":${TEXINPUTS}:.:${confdir}"
-export BIBINPUTS=":${BIBNPUTS}:.:${confdir}:${HOME}/org"
+Dropbox/riemann/homedir/.profile_tex

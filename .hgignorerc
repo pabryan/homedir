@@ -1,12 +1,1 @@
-syntax: glob
-*~
-*.orig
-.emacs.d/.org-id-locations
-.emacs.d/org-clock-save.el
-.emacs.d/session.*
-.emacs.d/tramp
-.emacs.d/elpa/*
-.emacs.d/bookmarks
-bin/git-trac
-bin/hub
-.emacs.d/#org-clock-save.el#
+Dropbox/riemann/homedir/.hgignorerc

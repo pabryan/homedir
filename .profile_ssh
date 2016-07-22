@@ -1,3 +1,1 @@
-# Find ssh-agent and load keys
-. "$HOME/working/external/ssh-find-agent/ssh-find-agent.bash"
-set_ssh_agent_socket
+Dropbox/riemann/homedir/.profile_ssh

@@ -1,2 +1,1 @@
-$pdflatex = 'pdflatex -interaction=nonstopmode';
-$pdf_mode = 1;
+Dropbox/riemann/homedir/.latexmkrc
