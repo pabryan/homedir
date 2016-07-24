@@ -1,1 +1,5 @@
-Dropbox/riemann/homedir/.hgignore
+syntax: regexp
+^\.emacs\.d/auto-save-list/.*
+
+syntax: glob
+*~
